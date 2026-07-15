@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Текстиль и хозтовары — Shen</title>
+  <meta name="description" content="Профессиональный текстиль, клининг и санитарное обеспечение для HoReCa: постельное бельё, полотенца, уборочный инвентарь, диспенсеры. Бренды SAREV, Vileda, Tork." />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root { --red:#c0392b; --red-dark:#7b1e12; --ink:#17130f; --muted:#6b6560; --line:#e7e3dd; --bg:#fff; --bg-soft:#f6f3ef; }
+    body { font-family:'Inter','Arial',sans-serif; background:var(--bg); color:var(--ink); -webkit-font-smoothing:antialiased; line-height:1.5; }
+    a { color:inherit; text-decoration:none; }
+    img { display:block; max-width:100%; }
+    .shp-container { max-width:1180px; margin:0 auto; padding:0 40px; }
+    .shp-eyebrow { display:inline-flex; align-items:center; gap:10px; font-size:11px; font-weight:700; letter-spacing:.15em; text-transform:uppercase; color:var(--red); margin-bottom:18px; }
+    .shp-eyebrow::before { content:''; width:24px; height:2px; background:var(--red); }
+    .shp-topbar { position:sticky; top:0; z-index:50; background:rgba(255,255,255,.85); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid var(--line); }
+    .shp-topbar-inner { max-width:1180px; margin:0 auto; padding:16px 40px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .shp-logo { font-size:20px; font-weight:800; letter-spacing:.5px; }
+    .shp-logo span { color:var(--red); }
+    .shp-back { display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:600; color:var(--muted); padding:9px 16px; border:1px solid var(--line); border-radius:100px; transition:color .2s,border-color .2s,background .2s; }
+    .shp-back:hover { color:var(--red); border-color:var(--red); background:rgba(192,57,43,.05); }
+    .shp-back svg { width:15px; height:15px; }
+    .shp-btn { display:inline-flex; align-items:center; gap:9px; padding:15px 28px; border-radius:100px; font-size:14px; font-weight:700; cursor:pointer; transition:transform .2s,background .2s,border-color .2s,color .2s,box-shadow .2s; }
+    .shp-btn svg { width:16px; height:16px; }
+    .shp-btn--primary { background:var(--red); color:#fff; box-shadow:0 10px 26px rgba(192,57,43,.28); }
+    .shp-btn--primary:hover { background:#d9503f; transform:translateY(-2px); }
+    .shp-btn--ghost { border:1px solid var(--line); color:var(--ink); background:#fff; }
+    .shp-btn--ghost:hover { border-color:var(--ink); transform:translateY(-2px); }
+    .shp-hero { padding:56px 0 72px; }
+    .shp-breadcrumb { font-size:12.5px; color:var(--muted); margin-bottom:30px; }
+    .shp-breadcrumb a:hover { color:var(--red); }
+    .shp-breadcrumb span { color:var(--ink); }
+    .shp-hero-grid { display:grid; grid-template-columns:1.05fr .95fr; gap:60px; align-items:center; }
+    .shp-h1 { font-size:clamp(34px,5vw,58px); font-weight:900; line-height:1.05; letter-spacing:-.03em; margin-bottom:22px; }
+    .shp-h1 em { font-style:normal; color:var(--red); }
+    .shp-lead { font-size:clamp(15px,1.5vw,17px); line-height:1.7; color:var(--muted); margin-bottom:34px; max-width:540px; }
+    .shp-hero-actions { display:flex; flex-wrap:wrap; gap:14px; margin-bottom:34px; }
+    .shp-hero-tags { display:flex; flex-wrap:wrap; gap:8px; }
+    .shp-tag { font-size:12.5px; font-weight:600; color:var(--ink); background:var(--bg-soft); border:1px solid var(--line); border-radius:100px; padding:7px 15px; }
+    .shp-hero-media { position:relative; border-radius:22px; overflow:hidden; aspect-ratio:4/5; box-shadow:0 32px 70px rgba(23,19,15,.18); }
+    .shp-hero-media img { width:100%; height:100%; object-fit:cover; }
+    .shp-hero-badge { position:absolute; left:20px; bottom:20px; background:rgba(255,255,255,.92); backdrop-filter:blur(8px); border-radius:14px; padding:14px 18px; box-shadow:0 12px 30px rgba(0,0,0,.14); }
+    .shp-hero-badge b { display:block; font-size:20px; font-weight:900; letter-spacing:-.02em; }
+    .shp-hero-badge span { font-size:12px; color:var(--muted); }
+    .shp-stats-wrap { background:var(--bg-soft); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .shp-stats { display:grid; grid-template-columns:repeat(4,1fr); }
+    .shp-stat { padding:34px 28px; border-right:1px solid var(--line); }
+    .shp-stat:last-child { border-right:none; }
+    .shp-stat-num { font-size:34px; font-weight:900; letter-spacing:-.03em; line-height:1; }
+    .shp-stat-num span { color:var(--red); font-size:.68em; }
+    .shp-stat-label { margin-top:8px; font-size:12.5px; color:var(--muted); line-height:1.4; }
+    .shp-section { padding:88px 0; }
+    .shp-section--soft { background:var(--bg-soft); }
+    .shp-section-head { max-width:720px; margin-bottom:48px; }
+    .shp-h2 { font-size:clamp(26px,3.2vw,40px); font-weight:800; letter-spacing:-.03em; line-height:1.12; margin-bottom:16px; }
+    .shp-section-text { font-size:15.5px; line-height:1.75; color:var(--muted); }
+    .shp-cats { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .shp-cat { background:#fff; border:1px solid var(--line); border-radius:18px; overflow:hidden; display:flex; flex-direction:column; transition:transform .3s,box-shadow .3s,border-color .3s; }
+    .shp-cat:hover { transform:translateY(-5px); box-shadow:0 22px 46px rgba(23,19,15,.12); border-color:transparent; }
+    .shp-cat-img { aspect-ratio:16/11; overflow:hidden; background:var(--bg-soft); }
+    .shp-cat-img img { width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.4,0,.2,1); }
+    .shp-cat--product .shp-cat-img img { object-fit:contain; padding:22px; }
+    .shp-cat:hover .shp-cat-img img { transform:scale(1.05); }
+    .shp-cat-body { padding:22px 24px 26px; display:flex; flex-direction:column; flex:1; }
+    .shp-cat-title { font-size:18px; font-weight:700; letter-spacing:-.01em; margin-bottom:8px; }
+    .shp-cat-desc { font-size:13.5px; line-height:1.65; color:var(--muted); margin-bottom:12px; }
+    .shp-cat-list { list-style:none; display:flex; flex-direction:column; gap:6px; margin-bottom:14px; }
+    .shp-cat-list li { font-size:12.5px; line-height:1.5; color:var(--muted); padding-left:14px; position:relative; }
+    .shp-cat-list li::before { content:''; position:absolute; left:0; top:8px; width:4px; height:4px; border-radius:50%; background:var(--red); }
+    .shp-cat-tags { display:flex; flex-wrap:wrap; gap:7px; margin-top:auto; }
+    .shp-cat-tag { font-size:11.5px; font-weight:600; color:var(--ink); background:var(--bg-soft); border-radius:7px; padding:4px 10px; }
+    .shp-feature { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+    .shp-feature + .shp-feature { margin-top:80px; }
+    .shp-feature--rev .shp-feature-media { order:2; }
+    .shp-feature-media { border-radius:20px; overflow:hidden; aspect-ratio:5/4; box-shadow:0 26px 56px rgba(23,19,15,.14); }
+    .shp-feature-media img { width:100%; height:100%; object-fit:cover; }
+    .shp-feature-list { list-style:none; margin-top:24px; display:flex; flex-direction:column; gap:16px; }
+    .shp-feature-list li { display:flex; gap:14px; align-items:flex-start; }
+    .shp-check { flex-shrink:0; width:26px; height:26px; border-radius:8px; background:rgba(192,57,43,.1); color:var(--red); display:flex; align-items:center; justify-content:center; margin-top:1px; }
+    .shp-check svg { width:14px; height:14px; }
+    .shp-feat-item-title { font-size:14.5px; font-weight:700; }
+    .shp-feat-item-text { font-size:13.5px; line-height:1.6; color:var(--muted); margin-top:2px; }
+    .shp-prose { margin-top:18px; }
+    .shp-prose p { font-size:14.5px; line-height:1.75; color:var(--muted); margin-bottom:14px; }
+    .shp-prose p:last-child { margin-bottom:0; }
+    .shp-audience { display:grid; grid-template-columns:repeat(2,1fr); gap:22px; }
+    .shp-aud-card { background:#fff; border:1px solid var(--line); border-radius:18px; padding:30px 28px; }
+    .shp-aud-title { font-size:18px; font-weight:700; margin-bottom:10px; }
+    .shp-aud-text { font-size:14px; line-height:1.7; color:var(--muted); margin-bottom:14px; }
+    .shp-aud-list { list-style:none; display:flex; flex-direction:column; gap:7px; }
+    .shp-aud-list li { font-size:13px; line-height:1.55; color:var(--ink); padding-left:16px; position:relative; }
+    .shp-aud-list li::before { content:'—'; position:absolute; left:0; color:var(--red); font-weight:700; }
+    .shp-zones { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .shp-zone { background:var(--bg-soft); border:1px solid var(--line); border-radius:16px; padding:26px 24px; }
+    .shp-zone-num { font-size:11px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--red); margin-bottom:10px; }
+    .shp-zone-title { font-size:16px; font-weight:700; margin-bottom:8px; }
+    .shp-zone-text { font-size:13.5px; line-height:1.65; color:var(--muted); }
+    .shp-adv { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .shp-adv-card { border:1px solid var(--line); border-radius:16px; padding:28px 24px; background:#fff; }
+    .shp-adv-title { font-size:16px; font-weight:700; margin-bottom:8px; }
+    .shp-adv-text { font-size:13.5px; line-height:1.65; color:var(--muted); }
+    .shp-brands { display:flex; flex-wrap:wrap; gap:10px; margin-top:28px; }
+    .shp-brand { font-size:13px; font-weight:600; color:var(--ink); background:#fff; border:1px solid var(--line); border-radius:10px; padding:9px 16px; }
+    .shp-faq { max-width:820px; }
+    .shp-faq-item { border-bottom:1px solid var(--line); padding:22px 0; }
+    .shp-faq-item:first-child { border-top:1px solid var(--line); }
+    .shp-faq-q { font-size:16px; font-weight:700; margin-bottom:10px; line-height:1.4; }
+    .shp-faq-a { font-size:14.5px; line-height:1.75; color:var(--muted); }
+    .shp-steps { display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
+    .shp-step { background:#fff; border:1px solid var(--line); border-radius:16px; padding:28px 24px; }
+    .shp-step-num { font-size:40px; font-weight:900; letter-spacing:-.04em; color:rgba(192,57,43,.18); line-height:1; margin-bottom:14px; }
+    .shp-step-title { font-size:16px; font-weight:700; margin-bottom:8px; }
+    .shp-step-text { font-size:13px; line-height:1.65; color:var(--muted); }
+    .shp-step-detail { margin-top:12px; padding-top:12px; border-top:1px solid var(--line); font-size:12.5px; line-height:1.6; color:var(--muted); }
+    .shp-cta { border-radius:26px; background:linear-gradient(140deg,var(--red) 0%,var(--red-dark) 100%); color:#fff; padding:60px 56px; display:grid; grid-template-columns:1.4fr 1fr; gap:40px; align-items:center; }
+    .shp-cta h2 { font-size:clamp(24px,3vw,36px); font-weight:900; letter-spacing:-.03em; margin-bottom:14px; }
+    .shp-cta p { font-size:15.5px; line-height:1.65; color:rgba(255,255,255,.9); max-width:520px; }
+    .shp-cta-actions { display:flex; flex-direction:column; gap:12px; }
+    .shp-cta .shp-btn--primary { background:#fff; color:var(--red); box-shadow:none; justify-content:center; }
+    .shp-cta .shp-btn--primary:hover { background:#f2f2f2; }
+    .shp-cta .shp-btn--ghost { background:transparent; border-color:rgba(255,255,255,.4); color:#fff; justify-content:center; }
+    .shp-cta .shp-btn--ghost:hover { border-color:#fff; }
+    .shp-footer { border-top:1px solid var(--line); padding:40px 0; font-size:13px; color:var(--muted); text-align:center; }
+    .shp-footer a { color:var(--ink); font-weight:600; }
+    .shp-footer a:hover { color:var(--red); }
+    @media (max-width:940px) {
+      .shp-container,.shp-topbar-inner { padding-left:20px; padding-right:20px; }
+      .shp-hero-grid { grid-template-columns:1fr; gap:36px; }
+      .shp-hero-media { order:-1; aspect-ratio:16/11; }
+      .shp-stats { grid-template-columns:repeat(2,1fr); }
+      .shp-stat:nth-child(2) { border-right:none; }
+      .shp-stat:nth-child(1),.shp-stat:nth-child(2) { border-bottom:1px solid var(--line); }
+      .shp-section { padding:60px 0; }
+      .shp-cats,.shp-feature,.shp-feature--rev,.shp-audience,.shp-adv,.shp-cta { grid-template-columns:1fr; }
+      .shp-feature--rev .shp-feature-media,.shp-feature-media { order:-1; }
+      .shp-steps { grid-template-columns:1fr 1fr; }
+      .shp-cta { padding:44px 26px; }
+    }
+    @media (max-width:520px) { .shp-steps,.shp-zones { grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+  <div class="shp-topbar">
+    <div class="shp-topbar-inner">
+      <a href="index.html" class="shp-logo">Shen<span>.</span></a>
+      <a href="index.html#block-about" class="shp-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Ко всем направлениям
+      </a>
+    </div>
+  </div>
+
+  <section class="shp-hero">
+    <div class="shp-container">
+      <div class="shp-breadcrumb">
+        <a href="index.html">Главная</a> / <a href="index.html#block-about">Направления</a> / <span>Текстиль и хозтовары</span>
+      </div>
+      <div class="shp-hero-grid">
+        <div>
+          <div class="shp-eyebrow">Направление 04</div>
+          <h1 class="shp-h1">Текстиль и <em>хозтовары</em></h1>
+          <p class="shp-lead">Профессиональный текстиль, клининг и санитарное обеспечение. Комплексные решения для номерного фонда, ресторанных залов и ежедневной эксплуатации объекта.</p>
+          <p class="shp-lead" style="margin-bottom:28px;font-size:15px;">На маркетплейсе Shen — текстиль, клининг и санитария от продавцов, заключивших договор с площадкой. Бренды SAREV, Vileda, Tork и другие — для комфорта гостей и чистоты объекта.</p>
+          <div class="shp-hero-actions">
+            <a href="index.html#block-b2b-contact" class="shp-btn shp-btn--primary">
+              Получить каталог
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="#categories" class="shp-btn shp-btn--ghost">Категории</a>
+          </div>
+          <div class="shp-hero-tags">
+            <span class="shp-tag">Постельное бельё</span>
+            <span class="shp-tag">Полотенца</span>
+            <span class="shp-tag">Клининг</span>
+            <span class="shp-tag">Санитария</span>
+          </div>
+        </div>
+        <div class="shp-hero-media">
+          <img src="images/photo-1556742049-0cfed4f6a45d.jpeg" alt="Текстиль и хозтовары для HoReCa" loading="eager">
+          <div class="shp-hero-badge">
+            <b>Комплекс</b>
+            <span>Текстиль · клининг · гигиена</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="shp-stats-wrap">
+    <div class="shp-container">
+      <div class="shp-stats">
+        <div class="shp-stat">
+          <div class="shp-stat-num">3<span>направления</span></div>
+          <div class="shp-stat-label">Текстиль, клининг, санитария</div>
+        </div>
+        <div class="shp-stat">
+          <div class="shp-stat-num">8<span>брендов</span></div>
+          <div class="shp-stat-label">SAREV, Vileda, Tork и другие</div>
+        </div>
+        <div class="shp-stat">
+          <div class="shp-stat-num">100<span>%</span></div>
+          <div class="shp-stat-label">Персонализация текстиля</div>
+        </div>
+        <div class="shp-stat">
+          <div class="shp-stat-num">B2B</div>
+          <div class="shp-stat-label">Оптовые условия</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="shp-section" id="categories">
+    <div class="shp-container">
+      <div class="shp-section-head">
+        <div class="shp-eyebrow">Ассортимент</div>
+        <h2 class="shp-h2">Всё для комфорта и чистоты объекта</h2>
+        <p class="shp-section-text">От постельного белья и полотенец до уборочного инвентаря и диспенсеров — полный комплект для номерного фонда, общественных зон и ежедневного обслуживания.</p>
+      </div>
+      <div class="shp-cats">
+
+        <article class="shp-cat">
+          <div class="shp-cat-img"><img src="images/photo-1556742049-0cfed4f6a45d.jpeg" alt="Постельное бельё" loading="lazy"></div>
+          <div class="shp-cat-body">
+            <h3 class="shp-cat-title">Постельное бельё</h3>
+            <p class="shp-cat-desc">Профессиональное постельное бельё для отелей и гостиниц — прочное, мягкое, выдерживает интенсивную стирку.</p>
+            <ul class="shp-cat-list">
+              <li>Пододеяльники, простыни, наволочки</li>
+              <li>Размеры под односпальные и двуспальные кровати</li>
+              <li>Плотность ткани от 200 до 400 TC</li>
+              <li>Хлопок, сатин, микрофибра</li>
+            </ul>
+            <div class="shp-cat-tags"><span class="shp-cat-tag">SAREV</span><span class="shp-cat-tag">Ozer</span></div>
+          </div>
+        </article>
+
+        <article class="shp-cat">
+          <div class="shp-cat-img"><img src="images/photo-1490645935967-10de6ba17061.jpeg" alt="Полотенца и халаты" loading="lazy"></div>
+          <div class="shp-cat-body">
+            <h3 class="shp-cat-title">Полотенца и халаты</h3>
+            <p class="shp-cat-desc">Банные, лицевые и ножные полотенца, халаты и тапочки для гостей отелей и SPA-зон.</p>
+            <ul class="shp-cat-list">
+              <li>Полотенца банные, лицевые, ножные</li>
+              <li>Халаты и тапочки для гостей</li>
+              <li>Коврики для ванных комнат</li>
+              <li>Разные размеры и плотности</li>
+            </ul>
+            <div class="shp-cat-tags"><span class="shp-cat-tag">Полотенца</span><span class="shp-cat-tag">Халаты</span></div>
+          </div>
+        </article>
+
+        <article class="shp-cat">
+          <div class="shp-cat-img"><img src="images/photo-1517248135467-4c7edcad34c4.jpeg" alt="Ресторанный текстиль" loading="lazy"></div>
+          <div class="shp-cat-body">
+            <h3 class="shp-cat-title">Ресторанный текстиль</h3>
+            <p class="shp-cat-desc">Скатерти, салфетки, чехлы для стульев и фартуки для персонала ресторанов и кафе.</p>
+            <ul class="shp-cat-list">
+              <li>Скатерти и салфетки тканевые и бумажные</li>
+              <li>Чехлы для стульев и банкеток</li>
+              <li>Фартуки и рабочая одежда персонала</li>
+              <li>Цветовая гамма под интерьер</li>
+            </ul>
+            <div class="shp-cat-tags"><span class="shp-cat-tag">Скатерти</span><span class="shp-cat-tag">Фартуки</span></div>
+          </div>
+        </article>
+
+        <article class="shp-cat">
+          <div class="shp-cat-img"><img src="images/photo-1564501049412-61c2a3083791.jpeg" alt="Клининговый инвентарь" loading="lazy"></div>
+          <div class="shp-cat-body">
+            <h3 class="shp-cat-title">Клининговый инвентарь</h3>
+            <p class="shp-cat-desc">Мопы, швабры, вёдра с отжимом, щётки, совки и уборочные тележки для ежедневной уборки объекта.</p>
+            <ul class="shp-cat-list">
+              <li>Мопы плоские и верёвочные</li>
+              <li>Швабры и вёдра с отжимом</li>
+              <li>Щётки, совки, скребки</li>
+              <li>Уборочные тележки и ведра</li>
+            </ul>
+            <div class="shp-cat-tags"><span class="shp-cat-tag">Vileda</span><span class="shp-cat-tag">Apex</span><span class="shp-cat-tag">Caprise</span></div>
+          </div>
+        </article>
+
+        <article class="shp-cat">
+          <div class="shp-cat-img"><img src="images/photo-1577219491135-ce391730fb2c.jpeg" alt="Санитарная гигиена" loading="lazy"></div>
+          <div class="shp-cat-body">
+            <h3 class="shp-cat-title">Санитарная гигиена</h3>
+            <p class="shp-cat-desc">Диспенсеры и расходные материалы: туалетная бумага, бумажные полотенца, мыло и средства гигиены.</p>
+            <ul class="shp-cat-list">
+              <li>Диспенсеры для бумаги и мыла</li>
+              <li>Туалетная бумага и полотенца</li>
+              <li>Жидкое мыло и антисептики</li>
+              <li>Мешки для мусора и расходники</li>
+            </ul>
+            <div class="shp-cat-tags"><span class="shp-cat-tag">Tork</span><span class="shp-cat-tag">Veiro</span><span class="shp-cat-tag">EKO</span></div>
+          </div>
+        </article>
+
+        <article class="shp-cat">
+          <div class="shp-cat-img"><img src="images/cutlery.png" alt="Персонализация текстиля" loading="lazy" style="object-fit:contain;padding:15%;background:var(--bg-soft);"></div>
+          <div class="shp-cat-body">
+            <h3 class="shp-cat-title">Персонализация</h3>
+            <p class="shp-cat-desc">Вышивка логотипа и корпоративной символики на текстиле. Цветовая гамма под фирменный стиль заведения.</p>
+            <ul class="shp-cat-list">
+              <li>Вышивка логотипа на полотенцах и халатах</li>
+              <li>Монограммы на постельном белье</li>
+              <li>Цветовая гамма под брендбук</li>
+              <li>Индивидуальные размеры и комплекты</li>
+            </ul>
+            <div class="shp-cat-tags"><span class="shp-cat-tag">Логотип</span><span class="shp-cat-tag">Брендинг</span></div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="shp-section shp-section--soft" id="audience">
+    <div class="shp-container">
+      <div class="shp-section-head">
+        <div class="shp-eyebrow">Для кого</div>
+        <h2 class="shp-h2">Кому нужен профессиональный текстиль и хозтовары</h2>
+        <p class="shp-section-text">Комплексные поставки для объектов любого масштаба — от бутик-отеля до сетевого ресторана и санатория.</p>
+      </div>
+      <div class="shp-audience">
+        <article class="shp-aud-card">
+          <h3 class="shp-aud-title">Отели и гостиницы</h3>
+          <p class="shp-aud-text">Номерной текстиль, банные принадлежности, клининг и санитария — всё для комфорта гостей и ежедневной эксплуатации.</p>
+          <ul class="shp-aud-list">
+            <li>Гостиницы и отели 3–5 звёзд</li>
+            <li>Апарт-отели и хостелы</li>
+            <li>Курортные комплексы</li>
+            <li>Бутик-отели</li>
+          </ul>
+        </article>
+        <article class="shp-aud-card">
+          <h3 class="shp-aud-title">Рестораны и кафе</h3>
+          <p class="shp-aud-text">Скатерти, салфетки, фартуки персонала и хозтовары для зала и кухни.</p>
+          <ul class="shp-aud-list">
+            <li>Рестораны и бистро</li>
+            <li>Кафе и кофейни</li>
+            <li>Банкетные залы</li>
+            <li>Столовые и фуд-корты</li>
+          </ul>
+        </article>
+        <article class="shp-aud-card">
+          <h3 class="shp-aud-title">Санатории и SPA</h3>
+          <p class="shp-aud-text">Текстиль для номерного фонда, банных зон и процедурных кабинетов. Халаты, полотенца, коврики.</p>
+          <ul class="shp-aud-list">
+            <li>Санатории и пансионаты</li>
+            <li>SPA и wellness-центры</li>
+            <li>Бани и сауны</li>
+            <li>Медицинские учреждения</li>
+          </ul>
+        </article>
+        <article class="shp-aud-card">
+          <h3 class="shp-aud-title">Сетевые объекты</h3>
+          <p class="shp-aud-text">Единые стандарты текстиля и хозтоваров для сети отелей, ресторанов или торговых точек.</p>
+          <ul class="shp-aud-list">
+            <li>Сетевые отели и хостелы</li>
+            <li>Франшизные рестораны</li>
+            <li>Торговые центры</li>
+            <li>Офисные центры</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="shp-section">
+    <div class="shp-container">
+      <div class="shp-section-head">
+        <div class="shp-eyebrow">Зоны объекта</div>
+        <h2 class="shp-h2">Текстиль и хозтовары для каждой зоны</h2>
+        <p class="shp-section-text">Каждая зона объекта требует своего набора текстиля и расходных материалов — мы комплектуем всё в одном заказе.</p>
+      </div>
+      <div class="shp-zones">
+        <div class="shp-zone">
+          <div class="shp-zone-num">Зона 01</div>
+          <div class="shp-zone-title">Номерной фонд</div>
+          <div class="shp-zone-text">Постельное бельё, полотенца, халаты, тапочки, коврики. Персонализация с логотипом отеля.</div>
+        </div>
+        <div class="shp-zone">
+          <div class="shp-zone-num">Зона 02</div>
+          <div class="shp-zone-title">Ванные комнаты</div>
+          <div class="shp-zone-text">Полотенца, коврики, диспенсеры мыла, туалетная бумага, косметические принадлежности.</div>
+        </div>
+        <div class="shp-zone">
+          <div class="shp-zone-num">Зона 03</div>
+          <div class="shp-zone-title">Ресторанный зал</div>
+          <div class="shp-zone-text">Скатерти, салфетки, чехлы для стульев, фартуки персонала, уборочный инвентарь.</div>
+        </div>
+        <div class="shp-zone">
+          <div class="shp-zone-num">Зона 04</div>
+          <div class="shp-zone-title">Клининг</div>
+          <div class="shp-zone-text">Мопы, швабры, вёдра, тележки, щётки, мешки для мусора — всё для горничных и уборщиков.</div>
+        </div>
+        <div class="shp-zone">
+          <div class="shp-zone-num">Зона 05</div>
+          <div class="shp-zone-title">Общественные санузлы</div>
+          <div class="shp-zone-text">Диспенсеры, бумажные полотенца, туалетная бумага, мыло, антисептики, урны.</div>
+        </div>
+        <div class="shp-zone">
+          <div class="shp-zone-num">Зона 06</div>
+          <div class="shp-zone-title">Склад и прачечная</div>
+          <div class="shp-zone-text">Запасной текстиль, стеллажи, корзины для белья, маркировка и учёт.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="shp-section shp-section--soft">
+    <div class="shp-container">
+
+      <div class="shp-feature">
+        <div class="shp-feature-media">
+          <img src="images/photo-1556742049-0cfed4f6a45d.jpeg" alt="Гостиничный текстиль" loading="lazy">
+        </div>
+        <div>
+          <div class="shp-eyebrow">Текстиль</div>
+          <h2 class="shp-h2">Гостиничный текстиль с брендингом</h2>
+          <p class="shp-section-text">Профессиональный текстиль для отелей — прочный, мягкий, выдерживает ежедневную стирку при высоких температурах.</p>
+          <div class="shp-prose">
+            <p>Постельное бельё SAREV и Ozer из хлопка и сатина с плотностью до 400 TC. Полотенца разных размеров и плотностей — от лёгких лицевых до плотных банных.</p>
+            <p>Вышивка логотипа и корпоративной символики на полотенцах, халатах и постельном белье. Цветовая гамма под фирменный стиль заведения.</p>
+          </div>
+          <ul class="shp-feature-list">
+            <li>
+              <span class="shp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><div class="shp-feat-item-title">Вышивка логотипа</div><div class="shp-feat-item-text">Брендинг на полотенцах, халатах, белье.</div></div>
+            </li>
+            <li>
+              <span class="shp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><div class="shp-feat-item-title">Промышленная стирка</div><div class="shp-feat-item-text">Выдерживает интенсивную эксплуатацию.</div></div>
+            </li>
+            <li>
+              <span class="shp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><div class="shp-feat-item-title">Полный комплект</div><div class="shp-feat-item-text">Бельё, полотенца, халаты, тапочки.</div></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="shp-feature shp-feature--rev">
+        <div class="shp-feature-media">
+          <img src="images/photo-1564501049412-61c2a3083791.jpeg" alt="Клининговый инвентарь" loading="lazy">
+        </div>
+        <div>
+          <div class="shp-eyebrow">Клининг</div>
+          <h2 class="shp-h2">Профессиональный уборочный инвентарь</h2>
+          <p class="shp-section-text">Клининговый инвентарь Vileda, Apex и Caprise для ежедневной уборки номеров, залов и общественных зон.</p>
+          <div class="shp-prose">
+            <p>Мопы плоские и верёвочные, швабры с системами отжима, уборочные тележки с отсеками для химии и расходников. Щётки, совки, скребки — всё для горничных и клининговых служб.</p>
+            <p>Эргономичные решения снижают нагрузку на персонал и ускоряют уборку. Совместимость с профессиональными моющими средствами.</p>
+          </div>
+          <ul class="shp-feature-list">
+            <li>
+              <span class="shp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><div class="shp-feat-item-title">Vileda Professional</div><div class="shp-feat-item-text">Мопы, швабры, системы уборки.</div></div>
+            </li>
+            <li>
+              <span class="shp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><div class="shp-feat-item-title">Уборочные тележки</div><div class="shp-feat-item-text">Мобильные станции для горничных.</div></div>
+            </li>
+            <li>
+              <span class="shp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><div class="shp-feat-item-title">Полный ассортимент</div><div class="shp-feat-item-text">От вёдер до щёток и совков.</div></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="shp-feature">
+        <div class="shp-feature-media">
+          <img src="images/photo-1577219491135-ce391730fb2c.jpeg" alt="Санитарная гигиена" loading="lazy">
+        </div>
+        <div>
+          <div class="shp-eyebrow">Санитария</div>
+          <h2 class="shp-h2">Диспенсеры и расходные материалы</h2>
+          <p class="shp-section-text">Санитарное обеспечение Tork, Veiro и EKO — диспенсеры, бумага, мыло и всё для гигиены общественных зон.</p>
+          <div class="shp-prose">
+            <p>Диспенсеры для туалетной бумаги, бумажных полотенец и жидкого мыла. Расходные материалы в промышленных упаковках для экономии и удобства закупок.</p>
+            <p>Антисептики, мешки для мусора, урны — полный комплект для санузлов в отелях, ресторанах и офисных центрах.</p>
+          </div>
+          <ul class="shp-feature-list">
+            <li>
+              <span class="shp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><div class="shp-feat-item-title">Tork — мировой лидер</div><div class="shp-feat-item-text">Диспенсеры и расходники.</div></div>
+            </li>
+            <li>
+              <span class="shp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><div class="shp-feat-item-title">Промышленные упаковки</div><div class="shp-feat-item-text">Выгодные объёмы для объектов.</div></div>
+            </li>
+            <li>
+              <span class="shp-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              <div><div class="shp-feat-item-title">Единая поставка</div><div class="shp-feat-item-text">Текстиль, клининг и санитария в одном заказе.</div></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="shp-section">
+    <div class="shp-container">
+      <div class="shp-section-head">
+        <div class="shp-eyebrow">Как заказать</div>
+        <h2 class="shp-h2">4 шага до полной комплектации</h2>
+        <p class="shp-section-text">Помогаем рассчитать количество текстиля и хозтоваров под количество номеров, зон и персонала.</p>
+      </div>
+      <div class="shp-steps">
+        <div class="shp-step">
+          <div class="shp-step-num">01</div>
+          <div class="shp-step-title">Заявка</div>
+          <div class="shp-step-text">Уточняем тип объекта, количество номеров, зоны и стандарты бренда.</div>
+          <div class="shp-step-detail">Определяем: номерной фонд, ресторан, клининг, санузлы.</div>
+        </div>
+        <div class="shp-step">
+          <div class="shp-step-num">02</div>
+          <div class="shp-step-title">Спецификация</div>
+          <div class="shp-step-text">Формируем перечень текстиля и хозтоваров с расчётом количества.</div>
+          <div class="shp-step-detail">Учитываем запас на стирку и ротацию.</div>
+        </div>
+        <div class="shp-step">
+          <div class="shp-step-num">03</div>
+          <div class="shp-step-title">Согласование</div>
+          <div class="shp-step-text">Утверждаем спецификацию, цвета, вышивку логотипа и оптовые условия.</div>
+          <div class="shp-step-detail">Подбираем бренды: SAREV, Vileda, Tork и другие.</div>
+        </div>
+        <div class="shp-step">
+          <div class="shp-step-num">04</div>
+          <div class="shp-step-title">Поставка</div>
+          <div class="shp-step-text">Доставляем комплект, помогаем с дозаказами при расширении объекта.</div>
+          <div class="shp-step-detail">Синхронизация с датой открытия или реновации.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="shp-section shp-section--soft">
+    <div class="shp-container">
+      <div class="shp-section-head">
+        <div class="shp-eyebrow">Почему Shen</div>
+        <h2 class="shp-h2">Преимущества нашего ассортимента</h2>
+      </div>
+      <div class="shp-adv">
+        <div class="shp-adv-card">
+          <div class="shp-adv-title">Комплексная поставка</div>
+          <div class="shp-adv-text">Текстиль, клининг и санитария в одном заказе на маркетплейсе — покупайте у разных продавцов, не переключаясь между магазинами.</div>
+        </div>
+        <div class="shp-adv-card">
+          <div class="shp-adv-title">Персонализация</div>
+          <div class="shp-adv-text">Вышивка логотипа и корпоративной символики. Цветовая гамма под фирменный стиль вашего заведения.</div>
+        </div>
+        <div class="shp-adv-card">
+          <div class="shp-adv-title">Промышленная стирка</div>
+          <div class="shp-adv-text">Текстиль выдерживает ежедневную стирку при высоких температурах. Сохраняет мягкость и цвет после сотен циклов.</div>
+        </div>
+        <div class="shp-adv-card">
+          <div class="shp-adv-title">Проверенные бренды</div>
+          <div class="shp-adv-text">SAREV, Vileda, Tork — мировые бренды от проверенных продавцов маркетплейса Shen.</div>
+        </div>
+        <div class="shp-adv-card">
+          <div class="shp-adv-title">Оптовые цены</div>
+          <div class="shp-adv-text">Скидки от объёма заказа. Выгодные условия при комплектации всего объекта в одном заказе.</div>
+        </div>
+        <div class="shp-adv-card">
+          <div class="shp-adv-title">Доставка по России</div>
+          <div class="shp-adv-text">Отправляем в любой регион. Синхронизация с датой открытия отеля или запуска ресторана.</div>
+        </div>
+      </div>
+      <div class="shp-brands">
+        <span class="shp-brand">SAREV</span>
+        <span class="shp-brand">Ozer</span>
+        <span class="shp-brand">Vileda</span>
+        <span class="shp-brand">Apex</span>
+        <span class="shp-brand">Caprise</span>
+        <span class="shp-brand">Tork</span>
+        <span class="shp-brand">Veiro</span>
+        <span class="shp-brand">EKO</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="shp-section" id="faq">
+    <div class="shp-container">
+      <div class="shp-section-head">
+        <div class="shp-eyebrow">Вопросы и ответы</div>
+        <h2 class="shp-h2">Частые вопросы</h2>
+      </div>
+      <div class="shp-faq">
+        <div class="shp-faq-item">
+          <div class="shp-faq-q">Можно ли заказать текстиль с вышивкой логотипа?</div>
+          <div class="shp-faq-a">Да, мы выполняем вышивку логотипа и корпоративной символики на полотенцах, халатах, постельном белье и других изделиях. Цветовая гамма подбирается под ваш брендбук.</div>
+        </div>
+        <div class="shp-faq-item">
+          <div class="shp-faq-q">Как рассчитать количество постельного белья для отеля?</div>
+          <div class="shp-faq-a">Менеджер рассчитает количество с учётом числа номеров, частоты смены белья и наличия прачечной. Обычно закладывается трёхкратный запас: на номере, в стирке и на складе.</div>
+        </div>
+        <div class="shp-faq-item">
+          <div class="shp-faq-q">Выдерживает ли текстиль промышленную стирку?</div>
+          <div class="shp-faq-a">Да, весь гостиничный текстиль SAREV и Ozer рассчитан на ежедневную стирку при температуре до 90°C. Сохраняет мягкость, цвет и форму после сотен циклов.</div>
+        </div>
+        <div class="shp-faq-item">
+          <div class="shp-faq-q">Можно ли заказать текстиль, клининг и санитарию в одном заказе?</div>
+          <div class="shp-faq-a">Да, это одно из наших ключевых преимуществ. Единый менеджер, единая спецификация и оптовые условия на весь комплект — текстиль, уборочный инвентарь и расходные материалы.</div>
+        </div>
+        <div class="shp-faq-item">
+          <div class="shp-faq-q">Какие диспенсеры Tork вы поставляете?</div>
+          <div class="shp-faq-a">Полный ассортимент Tork: диспенсеры для туалетной бумаги, бумажных полотенец, жидкого мыла и антисептиков. Настенные и напольные модели для любых санузлов.</div>
+        </div>
+        <div class="shp-faq-item">
+          <div class="shp-faq-q">Как получить оптовые условия?</div>
+          <div class="shp-faq-a">Свяжитесь с B2B-менеджером через форму на сайте. Скидки рассчитываются от объёма заказа. При комплектации всего объекта — максимально выгодные условия.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="shp-container">
+    <div class="shp-cta" style="margin:40px 0 90px;">
+      <div>
+        <h2>Укомплектуем ваш объект текстилем и хозтоварами</h2>
+        <p>Оставьте заявку — менеджер уточнит количество номеров, зоны и подготовит спецификацию. Первая консультация бесплатна.</p>
+      </div>
+      <div class="shp-cta-actions">
+        <a href="index.html#block-b2b-contact" class="shp-btn shp-btn--primary">
+          Получить предложение
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="index.html#block-brands" class="shp-btn shp-btn--ghost">Все бренды</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="shp-footer">
+    <div class="shp-container">
+      Shen · Текстиль и хозтовары ·
+      <a href="index.html">На главную</a> ·
+      <a href="hotels-horeca.html">Гостиницы и HoReCa</a> ·
+      <a href="tableware-kitchen.html">Посуда и кухонный инвентарь</a> ·
+      <a href="furniture.html">Мебель</a> ·
+      <a href="professional-equipment.html">Профессиональное оборудование</a>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>shen.market — блоки</title>
+  <title>shen.market — маркетплейс для покупателей и продавцов</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -86,13 +86,13 @@
 <!-- ═══════════════════════ HEADER ═══════════════════════ -->
 <header class="dev-header">
   <nav class="dev-nav">
-    <a href="#block-marketplace" class="active">Маркетплейс</a>
+    <a href="#block-marketplace" class="active">Главная</a>
     <a href="#block-about">О компании</a>
-    <a href="#block-how">Как это работает</a>
+    <a href="#block-brands">Ассортимент</a>
+    <a href="#block-services">Услуги</a>
+    <a href="become-seller.html">Продавцам</a>
     <a href="#block-reviews">Отзывы</a>
-    <a href="#block-advantages">Преимущества</a>
     <a href="#block-faq">FAQ</a>
-    
   </nav>
 </header>
 
@@ -348,6 +348,7 @@
       max-width: 500px;
       line-height: 1.7;
     }
+    .shen-mp-cta-btns { display: flex; flex-wrap: wrap; gap: 12px; flex-shrink: 0; }
     .shen-mp-cta-btn {
       display: inline-flex;
       align-items: center;
@@ -392,9 +393,9 @@
 
     <!-- Heading -->
     <div class="shen-mp-heading">
-      <div class="shen-mp-heading-eyebrow">shen.market</div>
-      <h2>Всё для профессионалов<br>и <em>вашего дома</em></h2>
-      <p>Профессиональное и бытовое оборудование от ведущих производителей — широкий выбор, удобный заказ и доставка по Крыму и всей России.</p>
+      <div class="shen-mp-heading-eyebrow">Маркетплейс</div>
+      <h2>Покупайте и продавайте<br>на <em>одной площадке</em></h2>
+      <p>Shen — маркетплейс, где проверенные продавцы размещают товары, а покупатели заказывают всё в одном месте — от посуды и мебели до профессионального оборудования.</p>
     </div>
 
     <!-- Bento Grid -->
@@ -409,9 +410,9 @@
             <polyline points="9 22 9 12 15 12 15 22"/>
           </svg>
         </div>
-        <div class="shen-mp-card-title">Для дома и жизни</div>
-        <div class="shen-mp-card-text">Текстиль, посуда, кухонный инвентарь и всё необходимое для уюта — в одном каталоге.</div>
-        <span class="shen-mp-card-tag">Быт</span>
+        <div class="shen-mp-card-title">Для покупателей</div>
+        <div class="shen-mp-card-text">Выбирайте товары от разных продавцов, сравнивайте цены и оформляйте заказ в одной корзине — удобно и безопасно.</div>
+        <span class="shen-mp-card-tag">Покупка</span>
       </div>
 
       <!-- 2 -->
@@ -422,9 +423,9 @@
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           </svg>
         </div>
-        <div class="shen-mp-card-title">Проверенное качество</div>
-        <div class="shen-mp-card-text">Оборудование от ведущих европейских производителей — надёжность, долговечность и соответствие стандартам.</div>
-        <span class="shen-mp-card-tag">Качество</span>
+        <div class="shen-mp-card-title">Проверенные продавцы</div>
+        <div class="shen-mp-card-text">На площадке работают только продавцы, заключившие договор с Shen — мы проверяем каждого партнёра.</div>
+        <span class="shen-mp-card-tag">Доверие</span>
       </div>
 
       <!-- 3 -->
@@ -437,9 +438,9 @@
             <line x1="6" y1="2" x2="6" y2="4"/><line x1="10" y1="2" x2="10" y2="4"/><line x1="14" y1="2" x2="14" y2="4"/>
           </svg>
         </div>
-        <div class="shen-mp-card-title">Профессиональные кухни</div>
-        <div class="shen-mp-card-text">Оснащение для ресторанов, кафе и отелей: тепловое, холодильное и барное оборудование.</div>
-        <span class="shen-mp-card-tag">HoReCa</span>
+        <div class="shen-mp-card-title">HoReCa и дом</div>
+        <div class="shen-mp-card-text">Посуда, мебель, текстиль, оборудование — для ресторанов, отелей и повседневной жизни.</div>
+        <span class="shen-mp-card-tag">Каталог</span>
       </div>
 
       <!-- 4 -->
@@ -451,9 +452,9 @@
             <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
           </svg>
         </div>
-        <div class="shen-mp-card-title">Широкий ассортимент</div>
-        <div class="shen-mp-card-text">Мебель, хозяйственные товары и инвентарь — каждый раздел подобран под ваши задачи.</div>
-        <span class="shen-mp-card-tag">Каталог</span>
+        <div class="shen-mp-card-title">30 000+ товаров</div>
+        <div class="shen-mp-card-text">Ассортимент от продавцов — сравнивайте предложения и находите лучшую цену.</div>
+        <span class="shen-mp-card-tag">Выбор</span>
       </div>
 
       <!-- 5 -->
@@ -464,9 +465,9 @@
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
           </svg>
         </div>
-        <div class="shen-mp-card-title">Личный менеджер</div>
-        <div class="shen-mp-card-text">Оформите заявку на сайте — наш специалист свяжется с вами, уточнит детали и поможет с выбором.</div>
-        <span class="shen-mp-card-tag">Сервис</span>
+        <div class="shen-mp-card-title">Для продавцов</div>
+        <div class="shen-mp-card-text">Заключите договор с Shen, разместите каталог и продавайте тысячам покупателей без своего интернет-магазина.</div>
+        <span class="shen-mp-card-tag">Продажа</span>
       </div>
 
       <!-- 6 — accent -->
@@ -488,13 +489,19 @@
     <!-- CTA -->
     <div class="shen-mp-cta">
       <div class="shen-mp-cta-text">
-        <h3>Готовы сделать заказ?</h3>
-        <p>Выберите нужный товар в каталоге — менеджер свяжется с вами для быстрого оформления. Цены вас приятно удивят.</p>
+        <h3>Каталог для покупателей · договор для продавцов</h3>
+        <p>Выбирайте товары в каталоге или станьте продавцом на Shen — заключите договор и начните продавать на нашей площадке.</p>
       </div>
+      <div class="shen-mp-cta-btns">
       <a href="#" class="shen-mp-cta-btn">
         Перейти в каталог
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
+      <a href="become-seller.html" class="shen-mp-cta-btn" style="background:#111;">
+        Стать продавцом
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      </div>
     </div>
 
   </div>
@@ -513,7 +520,7 @@
     .shen-ab-section {
       font-family: 'Inter', 'Arial', sans-serif;
       background: #111;
-      padding: 100px 40px;
+      padding: 100px 40px 104px;
       box-sizing: border-box;
       color: #fff;
     }
@@ -568,7 +575,10 @@
       font-size: 15px;
       line-height: 1.75;
       color: rgba(255,255,255,.55);
-      margin: 0 0 44px;
+      margin: 0 0 16px;
+    }
+    .shen-ab-text:last-of-type {
+      margin-bottom: 44px;
     }
 
     /* ── Stats ── */
@@ -655,113 +665,323 @@
       flex-shrink: 0;
     }
 
-    /* ── Directions ── */
-    .shen-ab-dirs {
+    /* ── B2B Section ── */
+    .shen-ab-b2b {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+      padding: 80px 0 16px;
+      border-top: 1px solid rgba(255,255,255,.08);
     }
 
-    .shen-ab-dir {
+    .shen-ab-b2b-heading {
+      margin-bottom: 36px;
+    }
+
+    .shen-ab-b2b-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .shen-ab-b2b-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      padding: 22px 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      transition: border-color .3s, background .3s;
+    }
+    .shen-ab-b2b-card:hover {
+      border-color: rgba(192,57,43,.45);
+      background: rgba(192,57,43,.06);
+    }
+
+    .shen-ab-b2b-card-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: rgba(192,57,43,.12);
+      border: 1px solid rgba(192,57,43,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .shen-ab-b2b-card-icon svg {
+      width: 21px;
+      height: 21px;
+      color: #c0392b;
+    }
+
+    .shen-ab-b2b-card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0 0 5px;
+    }
+    .shen-ab-b2b-card-text {
+      font-size: 13px;
+      line-height: 1.65;
+      color: rgba(255,255,255,.48);
+      margin: 0;
+    }
+
+    .shen-ab-b2b-visual {
       position: relative;
-      border-radius: 14px;
+    }
+    .shen-ab-b2b-visual img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 20px;
+      box-shadow: 0 32px 80px rgba(0,0,0,.55);
+    }
+
+    /* ── Directions carousel ── */
+    .shen-ab-carousel {
+      position: relative;
+    }
+    .shen-ab-car-viewport {
+      overflow: hidden;
+    }
+    .shen-ab-dirs {
+      --shen-ab-visible: 4;
+      --shen-ab-gap: 16px;
+      display: flex;
+      gap: var(--shen-ab-gap);
+      transition: transform .55s cubic-bezier(.4,0,.2,1);
+      will-change: transform;
+    }
+
+    .shen-ab-dir-card {
+      position: relative;
+      flex: 0 0 calc((100% - (var(--shen-ab-visible) - 1) * var(--shen-ab-gap)) / var(--shen-ab-visible));
+      border-radius: 18px;
       overflow: hidden;
       aspect-ratio: 3 / 4;
       cursor: default;
     }
-    .shen-ab-dir img {
+
+    /* ── Carousel arrows ── */
+    .shen-ab-car-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 5;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(20,20,20,.55);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background .25s, border-color .25s, opacity .25s;
+    }
+    .shen-ab-car-arrow:hover {
+      background: #c0392b;
+      border-color: #c0392b;
+    }
+    .shen-ab-car-arrow svg { width: 20px; height: 20px; }
+    .shen-ab-car-arrow--prev { left: -18px; }
+    .shen-ab-car-arrow--next { right: -18px; }
+    .shen-ab-car-arrow:disabled {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .shen-ab-dir-card img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform .6s ease, filter .4s ease;
-      filter: brightness(.88) saturate(1.05);
+      transition: transform .65s cubic-bezier(.4,0,.2,1);
     }
-    .shen-ab-dir:hover img {
-      transform: scale(1.07);
-      filter: brightness(.78) saturate(1.1);
+    .shen-ab-dir-card:hover img {
+      transform: scale(1.06);
     }
-
-    .shen-ab-dir::before {
+    .shen-ab-dir-card::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(0,0,0,.82) 0%,
-        rgba(0,0,0,.3) 45%,
-        rgba(0,0,0,.05) 100%
-      );
-      z-index: 1;
-      transition: background .35s;
-    }
-    .shen-ab-dir:hover::before {
-      background: linear-gradient(
-        to top,
-        rgba(155,27,18,.88) 0%,
-        rgba(100,15,10,.35) 50%,
-        rgba(0,0,0,.08) 100%
-      );
+      background: linear-gradient(to top, rgba(0,0,0,.82) 0%, rgba(0,0,0,.35) 42%, transparent 68%);
+      pointer-events: none;
     }
 
-    .shen-ab-dir-body {
+    .shen-ab-dir-overlay {
       position: absolute;
       bottom: 0;
       left: 0;
       right: 0;
-      padding: 24px 20px;
       z-index: 2;
+      padding: 24px 22px 26px;
     }
     .shen-ab-dir-num {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.45);
-      margin-bottom: 9px;
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: .06em;
+      color: rgba(255,255,255,.55);
+      margin-bottom: 10px;
+      font-variant-numeric: tabular-nums;
     }
     .shen-ab-dir-title {
-      font-size: 16px;
+      font-size: clamp(16px, 1.6vw, 19px);
       font-weight: 700;
+      letter-spacing: -.02em;
       color: #fff;
       line-height: 1.25;
-      margin-bottom: 8px;
+      margin: 0 0 8px;
     }
-    .shen-ab-dir-text {
-      font-size: 12px;
-      line-height: 1.55;
-      color: rgba(255,255,255,.55);
-      transition: color .3s;
+    .shen-ab-dir-desc {
+      font-size: 13px;
+      line-height: 1.5;
+      color: rgba(255,255,255,.72);
+      margin: 0;
     }
-    .shen-ab-dir:hover .shen-ab-dir-text { color: rgba(255,255,255,.8); }
 
-    /* ── Arrow indicator ── */
-    .shen-ab-dir-arrow {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      z-index: 2;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.12);
-      border: 1px solid rgba(255,255,255,.18);
+    .shen-ab-dir-card--click {
+      cursor: pointer;
+    }
+    .shen-ab-dir-card--click:hover .shen-ab-dir-title {
+      color: #f5b4ad;
+    }
+    .shen-ab-dir-card--product {
+      background: #2a2826;
+    }
+    .shen-ab-dir-card--product img {
+      object-fit: contain;
+      padding: 14%;
+      background: linear-gradient(145deg, #3a3835 0%, #2e2c29 100%);
+    }
+    .shen-ab-dir-card--product:hover img {
+      transform: scale(1.03);
+    }
+
+    /* ── Drawer ── */
+    .shen-ab-drawer-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.5);
+      z-index: 9000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .35s ease;
+    }
+    .shen-ab-drawer-overlay.is-open { opacity: 1; pointer-events: auto; }
+    .shen-ab-drawer {
+      position: fixed;
+      top: 0; right: 0; bottom: 0;
+      width: min(520px, 100vw);
+      background: #fff;
+      z-index: 9001;
+      transform: translateX(100%);
+      transition: transform .4s cubic-bezier(.4,0,.2,1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .shen-ab-drawer.is-open { transform: translateX(0); }
+    .shen-ab-dr-head { padding: 28px 28px 0; flex-shrink: 0; }
+    .shen-ab-dr-topbar {
       display: flex;
       align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transform: translate(6px, -6px) scale(.85);
-      transition: opacity .3s, transform .3s;
+      justify-content: space-between;
+      margin-bottom: 20px;
     }
-    .shen-ab-dir-arrow svg {
-      width: 15px;
-      height: 15px;
-      color: #fff;
+    .shen-ab-dr-badge {
+      font-size: 10px; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      color: #c0392b;
+      background: rgba(192,57,43,.08);
+      border-radius: 100px;
+      padding: 5px 12px;
     }
-    .shen-ab-dir:hover .shen-ab-dir-arrow {
-      opacity: 1;
-      transform: translate(0, 0) scale(1);
+    .shen-ab-dr-close {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(0,0,0,.12);
+      background: #fff;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s, border-color .2s;
+      flex-shrink: 0;
     }
+    .shen-ab-dr-close:hover { background: #f5f5f5; border-color: rgba(0,0,0,.2); }
+    .shen-ab-dr-close svg { width: 14px; height: 14px; color: #555; }
+    .shen-ab-dr-title {
+      font-size: clamp(20px, 3vw, 26px);
+      font-weight: 800; letter-spacing: -.025em;
+      color: #111; margin: 0 0 4px; line-height: 1.2;
+    }
+    .shen-ab-dr-subtitle { font-size: 13px; color: #888; margin: 0 0 22px; }
+    .shen-ab-dr-img {
+      margin: 0 28px;
+      border-radius: 16px; overflow: hidden;
+      aspect-ratio: 16/7; background: #e8e6e3;
+      flex-shrink: 0;
+    }
+    .shen-ab-dr-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .shen-ab-dr-img--dual {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+      aspect-ratio: unset; background: transparent;
+      border-radius: 0; overflow: visible;
+    }
+    .shen-ab-dr-img--dual .shen-ab-dr-img-cell {
+      border-radius: 12px; overflow: hidden;
+      aspect-ratio: 4/3; background: #e8e6e3;
+    }
+    .shen-ab-dr-img--dual .shen-ab-dr-img-cell img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .shen-ab-dr-body {
+      flex: 1; overflow-y: auto;
+      padding: 24px 28px 28px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .shen-ab-dr-body::-webkit-scrollbar { width: 4px; }
+    .shen-ab-dr-body::-webkit-scrollbar-track { background: transparent; }
+    .shen-ab-dr-body::-webkit-scrollbar-thumb { background: rgba(0,0,0,.15); border-radius: 4px; }
+    .shen-ab-dr-desc { font-size: 14px; line-height: 1.75; color: #555; margin: 0 0 24px; }
+    .shen-ab-dr-sub { margin-bottom: 22px; }
+    .shen-ab-dr-sub-title {
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: .1em;
+      color: #111; margin: 0 0 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgba(0,0,0,.07);
+    }
+    .shen-ab-dr-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
+    .shen-ab-dr-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; line-height: 1.55; color: #444; }
+    .shen-ab-dr-list li::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: #c0392b; flex-shrink: 0; margin-top: 7px; }
+    .shen-ab-dr-brands { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 10px; }
+    .shen-ab-dr-brand { background: #f4f3f1; border: 1px solid rgba(0,0,0,.1); border-radius: 8px; padding: 5px 13px; font-size: 12px; font-weight: 600; color: #222; }
+    .shen-ab-dr-footer {
+      padding: 16px 28px 24px;
+      border-top: 1px solid rgba(0,0,0,.07);
+      display: flex; align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0; gap: 12px;
+    }
+    .shen-ab-dr-nav-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 10px 18px; border-radius: 100px;
+      border: 1px solid rgba(0,0,0,.12); background: #fff;
+      font-size: 12px; font-weight: 600; color: #333;
+      cursor: pointer;
+      transition: border-color .2s, color .2s;
+    }
+    .shen-ab-dr-nav-btn:hover { border-color: #c0392b; color: #c0392b; }
+    .shen-ab-dr-nav-btn:disabled { opacity: .35; pointer-events: none; }
+    .shen-ab-dr-nav-btn svg { width: 14px; height: 14px; }
+    .shen-ab-dr-nav-counter { font-size: 12px; color: #aaa; font-weight: 500; }
 
     /* ── Mobile ── */
     @media (max-width: 900px) {
@@ -772,15 +992,20 @@
         margin-bottom: 48px;
       }
       .shen-ab-stat-num { font-size: 30px; }
-      .shen-ab-dirs {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
+      .shen-ab-b2b {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 0 16px;
       }
-      .shen-ab-dir { aspect-ratio: 3 / 3.5; }
+      .shen-ab-b2b-visual { order: -1; }
+      .shen-ab-dirs { --shen-ab-visible: 2; --shen-ab-gap: 12px; }
+      .shen-ab-dir-overlay { padding: 20px 18px 22px; }
+      .shen-ab-car-arrow { width: 44px; height: 44px; }
+      .shen-ab-car-arrow--prev { left: -8px; }
+      .shen-ab-car-arrow--next { right: -8px; }
     }
     @media (max-width: 520px) {
-      .shen-ab-dirs { grid-template-columns: 1fr; }
-      .shen-ab-dir { aspect-ratio: 16 / 9; }
+      .shen-ab-dirs { --shen-ab-visible: 1; }
     }
   </style>
 
@@ -789,28 +1014,26 @@
     <!-- Intro -->
     <div class="shen-ab-intro">
       <div>
-        <div class="shen-ab-eyebrow">О компании</div>
-        <h2 class="shen-ab-h2">Ведущий поставщик<br>в Крыму с <em>2004</em> года</h2>
-        <p class="shen-ab-text">Профессиональное оборудование для предприятий общественного питания, гостиничного бизнеса и пищевой промышленности. Комплексные решения для оснащения объектов любого масштаба — от небольшого кафе до крупного производства.</p>
+        <div class="shen-ab-eyebrow">О нас</div>
+        <h2 class="shen-ab-h2">Маркетплейс для<br><em>покупателей и продавцов</em></h2>
+        <p class="shen-ab-text">Shen — это маркетплейс, который объединяет продавцов и покупателей на одной площадке. Каждый продавец заключает с нами договор, проходит проверку и получает доступ к размещению товаров в каталоге.</p>
+        <p class="shen-ab-text">Покупатели — частные лица и бизнес — находят в каталоге более <strong style="color:#fff">30 000 наименований</strong>: посуда, барное стекло, столовые приборы, кухонный инвентарь, текстиль, мебель и профессиональное оборудование от проверенных продавцов.</p>
+        <p class="shen-ab-text">Один сайт, единая корзина и удобная доставка — покупайте у разных продавцов, не переключаясь между магазинами.</p>
         <div class="shen-ab-stats">
           <div class="shen-ab-stat">
-            <div class="shen-ab-stat-num">2004</div>
-            <div class="shen-ab-stat-label">Год основания</div>
+            <div class="shen-ab-stat-num">30 000<span>+</span></div>
+            <div class="shen-ab-stat-label">Товаров в каталоге</div>
           </div>
           <div class="shen-ab-stat">
-            <div class="shen-ab-stat-num">18 000<span>+</span></div>
-            <div class="shen-ab-stat-label">Товаров в наличии</div>
-          </div>
-          <div class="shen-ab-stat">
-            <div class="shen-ab-stat-num">20<span>+</span></div>
-            <div class="shen-ab-stat-label">Лет на рынке</div>
+            <div class="shen-ab-stat-num">1<span>сайт</span></div>
+            <div class="shen-ab-stat-label">Множество продавцов</div>
           </div>
         </div>
       </div>
 
       <div class="shen-ab-photo">
         <img
-          src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=960&h=720&fit=crop&crop=center&q=85&auto=format"
+          src="images/photo-1577219491135-ce391730fb2c.jpeg"
           alt="Профессиональная кухня"
           loading="lazy"
         />
@@ -818,77 +1041,620 @@
       </div>
     </div>
 
-    <!-- Directions -->
-    <div class="shen-ab-dirs">
+    <div class="shen-ab-carousel">
+    <button class="shen-ab-car-arrow shen-ab-car-arrow--prev" id="shenDirPrev" aria-label="Предыдущие" disabled>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <button class="shen-ab-car-arrow shen-ab-car-arrow--next" id="shenDirNext" aria-label="Следующие">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+    <div class="shen-ab-car-viewport">
+    <div class="shen-ab-dirs" id="shenDirsTrack">
 
-      <div class="shen-ab-dir">
-        <img
-          src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=540&h=720&fit=crop&crop=center&q=82&auto=format"
-          alt="Проектирование гостиниц"
-          loading="lazy"
-        />
-        <div class="shen-ab-dir-body">
-          <div class="shen-ab-dir-num">01</div>
-          <div class="shen-ab-dir-title">Проектирование гостиниц</div>
-          <div class="shen-ab-dir-text">Полный комплекс услуг по оснащению гостиничных комплексов</div>
+      <a class="shen-ab-dir-card shen-ab-dir-card--click" href="hotels-horeca.html" aria-label="Гостиницы и HoReCa — открыть страницу">
+        <img src="images/photo-1517248135467-4c7edcad34c4.jpeg" alt="Гостиницы и HoReCa" loading="lazy">
+        <div class="shen-ab-dir-overlay">
+          <span class="shen-ab-dir-num">01</span>
+          <h3 class="shen-ab-dir-title">Гостиницы и HoReCa</h3>
+          <p class="shen-ab-dir-desc">Комплексное оснащение отелей, ресторанов, кафе и баров</p>
         </div>
-        <div class="shen-ab-dir-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+      </a>
+
+      <a class="shen-ab-dir-card shen-ab-dir-card--click shen-ab-dir-card--product" href="tableware-kitchen.html" aria-label="Посуда и кухонный инвентарь — открыть страницу">
+        <img src="images/cutlery.png" alt="Посуда и кухонный инвентарь" loading="lazy">
+        <div class="shen-ab-dir-overlay">
+          <span class="shen-ab-dir-num">02</span>
+          <h3 class="shen-ab-dir-title">Посуда и кухонный инвентарь</h3>
+          <p class="shen-ab-dir-desc">Посуда, барное стекло, приборы, гастроёмкости и инструменты</p>
         </div>
+      </a>
+
+      <a class="shen-ab-dir-card shen-ab-dir-card--click" href="textiles-household.html" aria-label="Текстиль и хозтовары — открыть страницу">
+        <img src="images/photo-1556742049-0cfed4f6a45d.jpeg" alt="Текстиль и хозтовары" loading="lazy">
+        <div class="shen-ab-dir-overlay">
+          <span class="shen-ab-dir-num">03</span>
+          <h3 class="shen-ab-dir-title">Текстиль и хозтовары</h3>
+          <p class="shen-ab-dir-desc">Профессиональный текстиль, клининг и санитарное обеспечение</p>
+        </div>
+      </a>
+
+      <a class="shen-ab-dir-card shen-ab-dir-card--click" href="furniture.html" aria-label="Мебель — открыть страницу">
+        <img src="images/photo-1517248135467-4c7edcad34c4.jpeg" alt="Мебель" loading="lazy">
+        <div class="shen-ab-dir-overlay">
+          <span class="shen-ab-dir-num">04</span>
+          <h3 class="shen-ab-dir-title">Мебель</h3>
+          <p class="shen-ab-dir-desc">Интерьерная мебель для залов, лобби и террас</p>
+        </div>
+      </a>
+
+      <a class="shen-ab-dir-card shen-ab-dir-card--click shen-ab-dir-card--product" href="professional-equipment.html" aria-label="Профессиональное оборудование — открыть страницу">
+        <img src="images/equipment-grid.png" alt="Профессиональное оборудование" loading="lazy">
+        <div class="shen-ab-dir-overlay">
+          <span class="shen-ab-dir-num">05</span>
+          <h3 class="shen-ab-dir-title">Профессиональное оборудование</h3>
+          <p class="shen-ab-dir-desc">Тепловое, холодильное и нейтральное — монтаж под ключ</p>
+        </div>
+      </a>
+
+    </div>
+    </div>
+    </div>
+
+  </div>
+
+  <script>
+  (function () {
+    /* ── Directions carousel ── */
+    var track    = document.getElementById('shenDirsTrack');
+    var dirPrev  = document.getElementById('shenDirPrev');
+    var dirNext  = document.getElementById('shenDirNext');
+
+    if (track && dirPrev && dirNext) {
+      var offset = 0;
+
+      function stepSize() {
+        var card = track.querySelector('.shen-ab-dir-card');
+        if (!card) return 0;
+        var gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap || 0) || 0;
+        return card.getBoundingClientRect().width + gap;
+      }
+      function maxOffset() {
+        return Math.max(0, track.scrollWidth - track.parentElement.clientWidth);
+      }
+      function apply() {
+        var max = maxOffset();
+        if (offset > max) offset = max;
+        if (offset < 0) offset = 0;
+        track.style.transform = 'translateX(' + (-offset) + 'px)';
+        dirPrev.disabled = offset <= 1;
+        dirNext.disabled = offset >= max - 1;
+      }
+
+      dirNext.addEventListener('click', function() { offset += stepSize(); apply(); });
+      dirPrev.addEventListener('click', function() { offset -= stepSize(); apply(); });
+
+      var rt;
+      window.addEventListener('resize', function() {
+        clearTimeout(rt);
+        rt = setTimeout(function() { offset = 0; apply(); }, 150);
+      });
+      apply();
+    }
+
+  })();
+  </script>
+
+</section>
+  </div>
+
+  <div id="block-audience">
+<!-- ============================================================
+     block-audience — «Кому мы подходим»
+     shen.market | изолированный блок, префикс .shen-aud-
+     ============================================================ -->
+<section class="shen-aud-section">
+  <style>
+    .shen-aud-section {
+      font-family: 'Inter', 'Arial', sans-serif;
+      background: #fff;
+      padding: 88px 40px;
+      box-sizing: border-box;
+      color: #111;
+    }
+
+    .shen-aud-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .shen-aud-split {
+      display: grid;
+      grid-template-columns: minmax(280px, 420px) 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    .shen-aud-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: #c0392b;
+      margin-bottom: 16px;
+    }
+    .shen-aud-eyebrow::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: #c0392b;
+      flex-shrink: 0;
+    }
+
+    .shen-aud-h2 {
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -.03em;
+      color: #111;
+      margin: 0 0 14px;
+    }
+
+    .shen-aud-subtitle {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #666;
+      margin: 0 0 32px;
+    }
+
+    /* ── Nav list ── */
+    .shen-aud-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      max-height: 420px;
+      overflow-y: auto;
+      padding-right: 6px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(0,0,0,.15) transparent;
+    }
+    .shen-aud-nav::-webkit-scrollbar { width: 4px; }
+    .shen-aud-nav::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,.15);
+      border-radius: 4px;
+    }
+
+    .shen-aud-nav-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: 100%;
+      padding: 11px 16px;
+      border: none;
+      border-left: 3px solid transparent;
+      border-radius: 0 12px 12px 0;
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+      transition: background .25s, border-color .25s, padding-left .25s;
+      font-family: inherit;
+    }
+    .shen-aud-nav-item:hover {
+      background: #f7f6f4;
+      padding-left: 22px;
+    }
+    .shen-aud-nav-item.is-active {
+      background: #f7f6f4;
+      border-left-color: #c0392b;
+      padding-left: 22px;
+    }
+
+    .shen-aud-nav-num {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      color: #ccc;
+      min-width: 22px;
+      font-variant-numeric: tabular-nums;
+      transition: color .25s;
+    }
+    .shen-aud-nav-item.is-active .shen-aud-nav-num {
+      color: #c0392b;
+    }
+
+    .shen-aud-nav-label {
+      font-size: 15px;
+      font-weight: 600;
+      color: #888;
+      letter-spacing: -.01em;
+      line-height: 1.3;
+      transition: color .25s;
+    }
+    .shen-aud-nav-item.is-active .shen-aud-nav-label {
+      color: #111;
+    }
+
+    .shen-aud-nav-arrow {
+      margin-left: auto;
+      width: 18px;
+      height: 18px;
+      opacity: 0;
+      transform: translateX(-6px);
+      transition: opacity .25s, transform .25s;
+      flex-shrink: 0;
+    }
+    .shen-aud-nav-arrow svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: #c0392b;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .shen-aud-nav-item.is-active .shen-aud-nav-arrow {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ── Showcase ── */
+    .shen-aud-showcase {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      height: 520px;
+      background: #111;
+      box-shadow: 0 24px 80px rgba(0,0,0,.14);
+    }
+
+    #shen-aud-imgs {
+      position: absolute;
+      inset: 0;
+    }
+
+    .shen-aud-showcase-img {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transition: opacity .7s ease, transform 8s ease;
+      transform: scale(1.04);
+    }
+    .shen-aud-showcase-img.is-active {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .shen-aud-showcase-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .shen-aud-showcase-img--product {
+      background: linear-gradient(145deg, #2a2a2a 0%, #1a1a1a 100%);
+    }
+    .shen-aud-showcase-img--product img {
+      object-fit: contain;
+      padding: 48px;
+    }
+
+    .shen-aud-showcase-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.82) 0%, rgba(0,0,0,.25) 45%, rgba(0,0,0,.05) 100%);
+      pointer-events: none;
+    }
+
+    .shen-aud-showcase-panel {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 3;
+      padding: 36px 36px 32px;
+    }
+
+    .shen-aud-panel-title {
+      font-size: clamp(22px, 2.5vw, 28px);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      color: #fff;
+      margin: 0 0 10px;
+      line-height: 1.15;
+      transition: opacity .35s, transform .35s;
+    }
+    .shen-aud-panel-desc {
+      font-size: 14px;
+      line-height: 1.65;
+      color: rgba(255,255,255,.72);
+      margin: 0 0 16px;
+      max-width: 480px;
+      transition: opacity .35s, transform .35s;
+    }
+    .shen-aud-panel-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      transition: opacity .35s;
+    }
+    .shen-aud-panel-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #fff;
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.18);
+      border-radius: 100px;
+      padding: 5px 12px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .shen-aud-showcase-panel.is-changing .shen-aud-panel-title,
+    .shen-aud-showcase-panel.is-changing .shen-aud-panel-desc,
+    .shen-aud-showcase-panel.is-changing .shen-aud-panel-tags {
+      opacity: 0;
+      transform: translateY(8px);
+    }
+
+    .shen-aud-showcase-counter {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      z-index: 4;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      color: rgba(255,255,255,.55);
+      font-variant-numeric: tabular-nums;
+    }
+    .shen-aud-showcase-counter strong {
+      color: #fff;
+      font-size: 15px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 960px) {
+      .shen-aud-section { padding: 72px 20px; }
+      .shen-aud-split {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .shen-aud-showcase { height: 420px; }
+      .shen-aud-nav {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 8px;
+        padding-bottom: 4px;
+        scrollbar-width: none;
+      }
+      .shen-aud-nav::-webkit-scrollbar { display: none; }
+      .shen-aud-nav-item {
+        flex: 0 0 auto;
+        border-left: none;
+        border-bottom: 3px solid transparent;
+        border-radius: 12px;
+        padding: 12px 16px;
+        white-space: nowrap;
+      }
+      .shen-aud-nav-item.is-active {
+        border-bottom-color: #c0392b;
+        padding-left: 16px;
+      }
+      .shen-aud-nav-num { display: none; }
+      .shen-aud-nav-arrow { display: none; }
+      .shen-aud-subtitle { margin-bottom: 20px; }
+    }
+    @media (max-width: 600px) {
+      .shen-aud-showcase { height: 360px; border-radius: 20px; }
+      .shen-aud-showcase-panel { padding: 24px 22px 22px; }
+    }
+  </style>
+
+  <div class="shen-aud-container">
+    <div class="shen-aud-split">
+
+      <div class="shen-aud-left">
+        <p class="shen-aud-eyebrow">Наши клиенты</p>
+        <h2 class="shen-aud-h2">Кому мы подходим</h2>
+        <p class="shen-aud-subtitle">Работаем с профессионалами рынка HoReCa и корпоративными клиентами — от кафе и баров до отелей, санаториев, фуд-кортов и торговых сетей.</p>
+
+        <nav class="shen-aud-nav" id="shen-aud-nav" aria-label="Сегменты клиентов"></nav>
       </div>
 
-      <div class="shen-ab-dir">
-        <img
-          src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=540&h=720&fit=crop&crop=center&q=82&auto=format"
-          alt="Пищевое производство"
-          loading="lazy"
-        />
-        <div class="shen-ab-dir-body">
-          <div class="shen-ab-dir-num">02</div>
-          <div class="shen-ab-dir-title">Пищевое производство</div>
-          <div class="shen-ab-dir-text">Оборудование для предприятий пищевой промышленности</div>
-        </div>
-        <div class="shen-ab-dir-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-        </div>
-      </div>
+      <div class="shen-aud-showcase" id="shen-aud-showcase">
+        <span class="shen-aud-showcase-counter" id="shen-aud-counter"><strong>01</strong> / 12</span>
+        <div id="shen-aud-imgs"></div>
 
-      <div class="shen-ab-dir">
-        <img
-          src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=540&h=720&fit=crop&crop=center&q=82&auto=format"
-          alt="Общественное питание"
-          loading="lazy"
-        />
-        <div class="shen-ab-dir-body">
-          <div class="shen-ab-dir-num">03</div>
-          <div class="shen-ab-dir-title">Общественное питание</div>
-          <div class="shen-ab-dir-text">Оснащение ресторанов, кафе, баров и столовых</div>
-        </div>
-        <div class="shen-ab-dir-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
-        </div>
-      </div>
-
-      <div class="shen-ab-dir">
-        <img
-          src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=540&h=720&fit=crop&crop=center&q=82&auto=format"
-          alt="Розничная торговля"
-          loading="lazy"
-        />
-        <div class="shen-ab-dir-body">
-          <div class="shen-ab-dir-num">04</div>
-          <div class="shen-ab-dir-title">Розничная торговля</div>
-          <div class="shen-ab-dir-text">Торговое оборудование для магазинов любых форматов</div>
-        </div>
-        <div class="shen-ab-dir-arrow">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+        <div class="shen-aud-showcase-panel" id="shen-aud-panel">
+          <h3 class="shen-aud-panel-title" id="shen-aud-panel-title"></h3>
+          <p class="shen-aud-panel-desc" id="shen-aud-panel-desc"></p>
+          <div class="shen-aud-panel-tags" id="shen-aud-panel-tags"></div>
         </div>
       </div>
 
     </div>
   </div>
+
+  <script>
+  (function () {
+    var data = [
+      {
+        label: 'Рестораны и кафе',
+        title: 'Рестораны и кафе',
+        desc: 'Полная сервировочная программа: столовая посуда, приборы, барное стекло, мебель и текстиль для залов любого формата.',
+        tags: ['Посуда', 'Мебель', 'Текстиль'],
+        img: 'images/photo-1517248135467-4c7edcad34c4.jpeg',
+        alt: 'Интерьер ресторана'
+      },
+      {
+        label: 'Отели и гостиницы',
+        title: 'Отели и гостиницы',
+        desc: 'Комплексная поставка номерного текстиля, ресторанной посуды, банных принадлежностей и хозяйственных товаров.',
+        tags: ['Текстиль', 'Хозтовары', 'Оборудование'],
+        img: 'images/photo-1556742049-0cfed4f6a45d.jpeg',
+        alt: 'Сервировка в отеле'
+      },
+      {
+        label: 'Бары и коктейльные',
+        title: 'Бары и коктейльные',
+        desc: 'Широкий ассортимент барного стекла, шейкеры, джиггеры и профессиональный инвентарь для приготовления коктейлей.',
+        tags: ['Барное стекло', 'Инвентарь'],
+        img: 'images/photo-1490645935967-10de6ba17061.jpeg',
+        alt: 'Барное стекло'
+      },
+      {
+        label: 'Столовые и кейтеринг',
+        title: 'Столовые и кейтеринг',
+        desc: 'Прочная посуда для интенсивного использования, GN-ёмкости, шведские линии и оборудование для выездного питания.',
+        tags: ['GN-ёмкости', 'Оборудование', 'Посуда'],
+        img: 'images/photo-1577219491135-ce391730fb2c.jpeg',
+        alt: 'Профессиональная кухня'
+      },
+      {
+        label: 'Офисы и корпоративы',
+        title: 'Офисы и корпоративные клиенты',
+        desc: 'Кухонные зоны, переговорные и обеденные комнаты: посуда, электрооборудование и хозяйственные товары оптом.',
+        tags: ['Оптовые цены', 'Хозтовары'],
+        img: 'images/photo-1564501049412-61c2a3083791.jpeg',
+        alt: 'Корпоративная кухня'
+      },
+      {
+        label: 'Торговые объекты',
+        title: 'Торговые объекты',
+        desc: 'Поставки для розничных сетей и специализированных магазинов: широкий выбор брендов и гибкая логистика.',
+        tags: ['Бренды', 'Логистика'],
+        img: 'images/cutlery.png',
+        alt: 'Ассортимент для торговли',
+        product: true
+      },
+      {
+        label: 'Санатории и SPA',
+        title: 'Санатории и wellness-центры',
+        desc: 'Текстиль, банные принадлежности, посуда и хозтовары для ресторанов, номерного фонда и процедурных зон.',
+        tags: ['Текстиль', 'Хозтовары', 'Посуда'],
+        img: 'images/photo-1556742049-0cfed4f6a45d.jpeg',
+        alt: 'Сервировка в санатории'
+      },
+      {
+        label: 'Пиццерии и фастфуд',
+        title: 'Пиццерии и фастфуд',
+        desc: 'Формы для выпечки, упаковка, прочная посуда и профессиональное кухонное оборудование для работы в высоком темпе.',
+        tags: ['Оборудование', 'Посуда', 'Инвентарь'],
+        img: 'images/photo-1577219491135-ce391730fb2c.jpeg',
+        alt: 'Кухня быстрого питания'
+      },
+      {
+        label: 'Пекарни и кондитерские',
+        title: 'Пекарни и кондитерские',
+        desc: 'Формы, противни, инвентарь для производства и витринная посуда для демонстрации хлебобулочных и кондитерских изделий.',
+        tags: ['Инвентарь', 'Посуда', 'Оборудование'],
+        img: 'images/equipment-neutral.png',
+        alt: 'Оборудование для пекарни',
+        product: true
+      },
+      {
+        label: 'Фуд-корты и ТРЦ',
+        title: 'Фуд-корты и торговые центры',
+        desc: 'Единый формат оснащения для нескольких точек питания: посуда, мебель, инвентарь и комплексная логистика под ключ.',
+        tags: ['Комплексно', 'Мебель', 'Логистика'],
+        img: 'images/photo-1517248135467-4c7edcad34c4.jpeg',
+        alt: 'Зона питания в торговом центре'
+      },
+      {
+        label: 'Образовательные учреждения',
+        title: 'Образовательные учреждения',
+        desc: 'Оснащение школьных, студенческих и корпоративных столовых: прочная посуда, GN-ёмкости и нейтральное оборудование.',
+        tags: ['GN-ёмкости', 'Посуда', 'Оборудование'],
+        img: 'images/equipment-grid.png',
+        alt: 'Оборудование для столовой',
+        product: true
+      },
+      {
+        label: 'Кофейни',
+        title: 'Кофейни',
+        desc: 'Посуда для подачи, стаканы и крышки, барное стекло, мебель и текстиль для кофеен specialty и сетевых форматов.',
+        tags: ['Посуда', 'Барное стекло', 'Мебель'],
+        img: 'images/photo-1490645935967-10de6ba17061.jpeg',
+        alt: 'Оснащение кофейни'
+      }
+    ];
+
+    var nav = document.getElementById('shen-aud-nav');
+    var imgsWrap = document.getElementById('shen-aud-imgs');
+    var panel = document.getElementById('shen-aud-panel');
+    var titleEl = document.getElementById('shen-aud-panel-title');
+    var descEl = document.getElementById('shen-aud-panel-desc');
+    var tagsEl = document.getElementById('shen-aud-panel-tags');
+    var counter = document.getElementById('shen-aud-counter');
+    if (!nav || !imgsWrap) return;
+
+    var arrowSvg = '<svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+
+    data.forEach(function (item, i) {
+      var btn = document.createElement('button');
+      btn.className = 'shen-aud-nav-item' + (i === 0 ? ' is-active' : '');
+      btn.type = 'button';
+      btn.dataset.index = i;
+      btn.innerHTML =
+        '<span class="shen-aud-nav-num">' + (i + 1 < 10 ? '0' + (i + 1) : i + 1) + '</span>' +
+        '<span class="shen-aud-nav-label">' + item.label + '</span>' +
+        '<span class="shen-aud-nav-arrow">' + arrowSvg + '</span>';
+      nav.appendChild(btn);
+
+      var slide = document.createElement('div');
+      slide.className = 'shen-aud-showcase-img' + (i === 0 ? ' is-active' : '') + (item.product ? ' shen-aud-showcase-img--product' : '');
+      slide.innerHTML = '<img src="' + item.img + '" alt="' + item.alt + '" loading="lazy">';
+      imgsWrap.appendChild(slide);
+    });
+
+    var imgs = imgsWrap.querySelectorAll('.shen-aud-showcase-img');
+    var items = nav.querySelectorAll('.shen-aud-nav-item');
+
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+    function setActive(index) {
+      items.forEach(function (el, i) {
+        el.classList.toggle('is-active', i === index);
+        if (i === index) el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      });
+      imgs.forEach(function (el, i) {
+        el.classList.toggle('is-active', i === index);
+      });
+      if (counter) counter.innerHTML = '<strong>' + pad(index + 1) + '</strong> / ' + pad(data.length);
+
+      panel.classList.add('is-changing');
+      setTimeout(function () {
+        titleEl.textContent = data[index].title;
+        descEl.textContent = data[index].desc;
+        tagsEl.innerHTML = data[index].tags.map(function (t) {
+          return '<span class="shen-aud-panel-tag">' + t + '</span>';
+        }).join('');
+        panel.classList.remove('is-changing');
+      }, 200);
+    }
+
+    items.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        setActive(parseInt(btn.dataset.index, 10));
+      });
+    });
+
+    setActive(0);
+  })();
+  </script>
 </section>
-  </div>
+  </div><!-- /#block-audience -->
+
+
+  <div id="block-b2b-process">
+
+  </div><!-- /#block-b2b-process -->
 
   <div id="block-how">
 <!-- ============================================================
@@ -1168,7 +1934,7 @@
         <div class="shen-hw-eyebrow">Процесс</div>
         <h2 class="shen-hw-h2">Как это<br><em>работает</em></h2>
       </div>
-      <p class="shen-hw-desc">Оформите заказ за несколько минут — наш менеджер возьмёт всё остальное на себя и доставит покупку прямо к вам.</p>
+      <p class="shen-hw-desc">Покупатель выбирает товар в каталоге, продавец получает заказ и отправляет его — простая схема маркетплейса.</p>
     </div>
 
     <!-- Steps -->
@@ -1185,7 +1951,7 @@
         <div class="shen-hw-content">
           <div class="shen-hw-step-label">Шаг 1</div>
           <div class="shen-hw-step-title">Выбрали товар</div>
-          <p class="shen-hw-step-text">Находите нужное в каталоге — мебель, посуду, текстиль, инвентарь. Фильтры помогут быстро сузить поиск по категории и бренду.</p>
+          <p class="shen-hw-step-text">Находите нужное в каталоге от разных продавцов — мебель, посуду, текстиль, инвентарь. Сравнивайте цены и выбирайте лучшее предложение.</p>
         </div>
         <div class="shen-hw-badge">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -1222,8 +1988,8 @@
         </div>
         <div class="shen-hw-content">
           <div class="shen-hw-step-label">Шаг 3</div>
-          <div class="shen-hw-step-title">Менеджер связался</div>
-          <p class="shen-hw-step-text">Персональный менеджер перезвонит в ближайшее время, уточнит детали и подберёт лучшие условия.</p>
+          <div class="shen-hw-step-title">Продавец получил заказ</div>
+          <p class="shen-hw-step-text">Продавец, заключивший договор с Shen, автоматически получает уведомление и приступает к комплектации заказа.</p>
         </div>
         <div class="shen-hw-badge">
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -1396,12 +2162,7 @@
       gap: 14px;
       width: max-content;
     }
-    .shen-rv-row--left  { animation: rv-left  40s linear infinite; }
-    .shen-rv-row--right { animation: rv-right 40s linear infinite; }
-    .shen-rv-row:hover  { animation-play-state: paused; }
-
-    @keyframes rv-left  { from { transform: translateX(0); }    to { transform: translateX(-50%); } }
-    @keyframes rv-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+    .shen-rv-row { will-change: transform; }
 
     /* ── Card ── */
     .shen-rv-card {
@@ -1926,25 +2687,19 @@
       <!-- Left: sticky featured card -->
       <div class="shen-wc-feature">
         <div class="shen-wc-eyebrow">Наши преимущества</div>
-        <h2>Почему нас выбирают снова и снова</h2>
-        <p>Качество, удобство и честные цены — на каждом этапе от выбора до доставки в любую точку Крыма и России.</p>
+        <h2>Почему профессионалы HoReCa выбирают Shen</h2>
+        <p>Официальная дистрибуция, собственная марка, 30 000+ наименований и персональный сервис — всё для вашего бизнеса.</p>
         <div class="shen-wc-rating">
-          <div class="shen-wc-rating-stars">
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-          </div>
-          <div class="shen-wc-rating-score">5.0</div>
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.85)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          <div class="shen-wc-rating-score">30 000+</div>
           <div class="shen-wc-rating-sep"></div>
           <div class="shen-wc-rating-meta">
-            <strong>2 088 отзывов</strong>
-            Яндекс Карты
+            <strong>наименований</strong>
+            в ассортименте
           </div>
         </div>
-        <a href="#" class="shen-wc-link">
-          Перейти в каталог
+        <a href="become-seller.html" class="shen-wc-link">
+          Получить коммерческое предложение
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </div>
@@ -1956,48 +2711,80 @@
           <span class="shen-wc-row-num">01</span>
           <div class="shen-wc-row-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
             </svg>
           </div>
           <div>
-            <div class="shen-wc-row-title">Европейское качество</div>
-            <div class="shen-wc-row-desc">Оборудование от ведущих зарубежных производителей — надёжное, проверенное и сертифицированное.</div>
+            <div class="shen-wc-row-title">30 000+ наименований</div>
+            <div class="shen-wc-row-desc">Посуда, мебель, текстиль, оборудование и хозтовары — полная комплектация заведения из одного источника.</div>
           </div>
-          <span class="shen-wc-row-tag">Качество</span>
+          <span class="shen-wc-row-tag">Каталог</span>
         </div>
 
         <div class="shen-wc-row">
           <span class="shen-wc-row-num">02</span>
           <div class="shen-wc-row-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-              <polyline points="9 22 9 12 15 12 15 22"/>
+              <circle cx="12" cy="8" r="6"/>
+              <path d="M9 12l2 2 4-4"/>
+              <path d="M3 20a9 9 0 0 1 18 0"/>
             </svg>
           </div>
           <div>
-            <div class="shen-wc-row-title">Для профессионалов и дома</div>
-            <div class="shen-wc-row-desc">Подходит для бизнеса в сфере HoReCa и для обустройства домашнего пространства.</div>
+            <div class="shen-wc-row-title">Официальная дистрибуция брендов</div>
+            <div class="shen-wc-row-desc">Porland, Korkmaz, Vileda, Siesta, SAREV и другие — прямые поставки от ведущих мировых производителей.</div>
           </div>
-          <span class="shen-wc-row-tag">Универсально</span>
+          <span class="shen-wc-row-tag">Бренды</span>
         </div>
 
         <div class="shen-wc-row">
           <span class="shen-wc-row-num">03</span>
           <div class="shen-wc-row-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <line x1="12" y1="1" x2="12" y2="23"/>
-              <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
             </svg>
           </div>
           <div>
-            <div class="shen-wc-row-title">Приятные цены</div>
-            <div class="shen-wc-row-desc">Прозрачное ценообразование без скрытых наценок — цены вас приятно удивят.</div>
+            <div class="shen-wc-row-title">Собственная марка HoReCa PROFI</div>
+            <div class="shen-wc-row-desc">Эксклюзивный ассортимент под собственной торговой маркой — профессиональное качество по оптимальной цене.</div>
           </div>
-          <span class="shen-wc-row-tag">Цены</span>
+          <span class="shen-wc-row-tag">Эксклюзив</span>
         </div>
 
         <div class="shen-wc-row">
           <span class="shen-wc-row-num">04</span>
+          <div class="shen-wc-row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <div>
+            <div class="shen-wc-row-title">Персональный менеджер</div>
+            <div class="shen-wc-row-desc">Закреплённый специалист подберёт ассортимент под концепцию вашего заведения и сопроводит сделку.</div>
+          </div>
+          <span class="shen-wc-row-tag">Сервис</span>
+        </div>
+
+        <div class="shen-wc-row">
+          <span class="shen-wc-row-num">05</span>
+          <div class="shen-wc-row-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="5" x2="5" y2="19"/>
+              <circle cx="6.5" cy="6.5" r="2.5"/>
+              <circle cx="17.5" cy="17.5" r="2.5"/>
+            </svg>
+          </div>
+          <div>
+            <div class="shen-wc-row-title">Гибкие скидки по объёму</div>
+            <div class="shen-wc-row-desc">Индивидуальные условия сотрудничества и скидки для B2B-клиентов в зависимости от объёма и регулярности закупок.</div>
+          </div>
+          <span class="shen-wc-row-tag">B2B</span>
+        </div>
+
+        <div class="shen-wc-row">
+          <span class="shen-wc-row-num">06</span>
           <div class="shen-wc-row-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="1" y="3" width="15" height="13" rx="2"/>
@@ -2008,38 +2795,9 @@
           </div>
           <div>
             <div class="shen-wc-row-title">Доставка по Крыму и России</div>
-            <div class="shen-wc-row-desc">Доставляем по всему Крыму и России. Самовывоз со склада в Симферополе.</div>
+            <div class="shen-wc-row-desc">Доставляем по всему Крыму и России. Самовывоз со склада в Симферополе — удобно и быстро.</div>
           </div>
           <span class="shen-wc-row-tag">Логистика</span>
-        </div>
-
-        <div class="shen-wc-row">
-          <span class="shen-wc-row-num">05</span>
-          <div class="shen-wc-row-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.61 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-          </div>
-          <div>
-            <div class="shen-wc-row-title">Персональный подход</div>
-            <div class="shen-wc-row-desc">Менеджер уточнит детали, поможет с выбором и согласует удобное время доставки.</div>
-          </div>
-          <span class="shen-wc-row-tag">Сервис</span>
-        </div>
-
-        <div class="shen-wc-row">
-          <span class="shen-wc-row-num">06</span>
-          <div class="shen-wc-row-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
-              <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
-            </svg>
-          </div>
-          <div>
-            <div class="shen-wc-row-title">Большой выбор</div>
-            <div class="shen-wc-row-desc">Оборудование, мебель, текстиль, посуда и многое другое — всё в одном месте.</div>
-          </div>
-          <span class="shen-wc-row-tag">Каталог</span>
         </div>
 
       </div>
@@ -2047,6 +2805,12 @@
   </div>
 </section>
   </div>
+
+
+  </div><!-- /#block-projects -->
+
+
+
 
   <div id="block-faq">
 <!-- ============================================================
@@ -2225,6 +2989,22 @@
         grid-template-columns: 1fr;
       }
     }
+    @media (max-width: 600px) {
+      .shen-faq-section {
+        padding: 64px 16px;
+      }
+      .shen-faq-heading {
+        padding-bottom: 32px;
+        margin-bottom: 40px;
+      }
+      .shen-faq-q-text {
+        font-size: 15px;
+      }
+      .shen-faq-question {
+        padding: 18px 0;
+        gap: 14px;
+      }
+    }
   </style>
 
   <div class="shen-faq-container">
@@ -2236,7 +3016,7 @@
       </div>
       <div class="shen-faq-heading-right">
         <p>Собрали ответы на самые популярные вопросы наших клиентов. Если не нашли нужный — напишите нам напрямую.</p>
-        <a href="#block-social" class="shen-faq-contact-link">Связаться с нами</a>
+        <a href="become-seller.html" class="shen-faq-contact-link">Стать продавцом</a>
       </div>
     </div>
 
@@ -2288,7 +3068,7 @@
           <span class="shen-faq-icon">+</span>
         </div>
         <div class="shen-faq-answer">
-          <div class="shen-faq-answer-inner">Гарантия на товары предоставляется в соответствии с законодательством Российской Федерации. При возникновении гарантийного случая свяжитесь с менеджером — мы поможем решить вопрос.</div>
+          <div class="shen-faq-answer-inner">Гарантия на товары предоставляется продавцом в соответствии с законодательством РФ. При возникновении гарантийного случая обратитесь в поддержку Shen — мы поможем связаться с продавцом и решить вопрос.</div>
         </div>
       </div>
 
@@ -2308,7 +3088,27 @@
           <span class="shen-faq-icon">+</span>
         </div>
         <div class="shen-faq-answer">
-          <div class="shen-faq-answer-inner">Да, мы активно сотрудничаем с организациями в сфере HoReCa, розничной торговли и корпоративного сектора. Оформляем все необходимые документы: счёт, накладную, акт выполненных работ.</div>
+          <div class="shen-faq-answer-inner">Да, мы активно сотрудничаем с организациями в сфере HoReCa, розничной торговли и корпоративного сектора. Оформляем полный пакет закрывающих документов: счёт, товарную накладную, акт выполненных работ. Возможна оплата по безналичному расчёту — для этого оставьте заявку, и менеджер подготовит договор и счёт на оплату.</div>
+        </div>
+      </div>
+
+      <div class="shen-faq-item">
+        <div class="shen-faq-question">
+          <span class="shen-faq-q-text">Как стать продавцом на Shen?</span>
+          <span class="shen-faq-icon">+</span>
+        </div>
+        <div class="shen-faq-answer">
+          <div class="shen-faq-answer-inner">Оставьте <a href="become-seller.html" style="color:#c0392b;font-weight:600;">заявку на странице для продавцов</a> или напишите на zakaz@shen.com.ru. Мы свяжемся с вами, обсудим ассортимент и условия, заключим договор — после этого вы сможете размещать товары в каталоге маркетплейса.</div>
+        </div>
+      </div>
+
+      <div class="shen-faq-item">
+        <div class="shen-faq-question">
+          <span class="shen-faq-q-text">Можно ли заказать комплектацию объекта под ключ?</span>
+          <span class="shen-faq-icon">+</span>
+        </div>
+        <div class="shen-faq-answer">
+          <div class="shen-faq-answer-inner">Да. На маркетплейсе можно собрать заказ для целого объекта — посуда, мебель, текстиль, оборудование — у разных продавцов в одной корзине. Выбирайте товары по категориям и оформляйте единый заказ.</div>
         </div>
       </div>
 
@@ -2324,7 +3124,20 @@
 <script>
   // Highlight active nav link on scroll
   const navLinks = document.querySelectorAll('.dev-nav a');
-  const blockIds = ['block-marketplace', 'block-advantages', 'block-counters', 'block-faq', 'block-social'];
+  const blockIds = [
+    'block-marketplace',
+    'block-about',
+    'block-audience',
+    'block-brands',
+    'block-solutions',
+    'block-services',
+    'block-b2b-process',
+    'block-how',
+    'block-advantages',
+    'block-projects',
+    'block-reviews',
+    'block-faq',
+  ];
 
   function setActive(id) {
     navLinks.forEach(a => {
@@ -2351,6 +3164,46 @@
       if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+
+  // Infinite marquee
+  (function () {
+    var SPEED = 0.06; // px per ms (~40px/s, плавно)
+
+    document.querySelectorAll('.shen-rv-row').forEach(function (row) {
+      var isRight = row.classList.contains('shen-rv-row--right');
+
+      // Запоминаем ширину одного «сета» ДО клонирования
+      var origCards = Array.from(row.querySelectorAll('.shen-rv-card'));
+      var setWidth = row.scrollWidth; // HTML уже содержит 2 сета — берём половину
+      // В HTML уже есть set1 + set2, поэтому setWidth = scrollWidth / 2
+      setWidth = Math.round(row.scrollWidth / 2);
+
+      // Клонируем карточки пока контент не покрывает 3× ширины экрана
+      while (row.scrollWidth < window.innerWidth * 3 + 400) {
+        origCards.forEach(function (c) { row.appendChild(c.cloneNode(true)); });
+      }
+
+      var pos = isRight ? -setWidth : 0;
+      var last = null;
+      var paused = false;
+
+      row.addEventListener('mouseenter', function () { paused = true; });
+      row.addEventListener('mouseleave', function () { paused = false; });
+
+      function step(ts) {
+        if (last !== null && !paused) {
+          var delta = Math.min(ts - last, 50); // cap delta чтобы не было скачка после вкладки
+          pos += isRight ? SPEED * delta : -SPEED * delta;
+          if (pos <= -setWidth) pos += setWidth;
+          if (pos > 0)          pos -= setWidth;
+          row.style.transform = 'translateX(' + pos + 'px)';
+        }
+        last = ts;
+        requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    });
+  })();
 
   // FAQ accordion
   (function () {
