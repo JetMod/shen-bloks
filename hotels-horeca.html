@@ -41,7 +41,7 @@
       padding: 0 40px;
     }
 
-    /* ─── Eyebrow label ─── */
+    
     .h-eyebrow {
       display: inline-flex;
       align-items: center;
@@ -60,7 +60,7 @@
       flex-shrink: 0;
     }
 
-    /* ─── Topbar ─── */
+    
     .h-topbar {
       position: sticky;
       top: 0;
@@ -101,7 +101,7 @@
     .h-back:hover { color: var(--red); border-color: var(--red); }
     .h-back svg { width: 14px; height: 14px; }
 
-    /* ─── Buttons ─── */
+    
     .h-btn {
       display: inline-flex;
       align-items: center;
@@ -134,7 +134,7 @@
     }
     .h-btn--outline:hover { border-color: var(--ink); transform: translateY(-2px); }
 
-    /* ─── HERO ─── */
+    
     .h-hero {
       padding: 56px 0 68px;
     }
@@ -274,7 +274,7 @@
       line-height: 1.4;
     }
 
-    /* ─── Section base ─── */
+    
     .h-section { padding: 88px 0; }
     .h-section--soft { background: var(--bg-soft); }
     .h-section--dark { background: var(--ink); color: #fff; }
@@ -293,7 +293,7 @@
       color: var(--muted);
     }
 
-    /* ─── Category mosaic ─── */
+    
     .h-cats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -362,7 +362,7 @@
     .h-cat-arrow svg { width: 14px; height: 14px; color: #fff; }
     .h-cat:hover .h-cat-arrow { opacity: 1; background: rgba(255,255,255,.22); }
 
-    /* ─── Zones bento (photo feature + list) ─── */
+    
     .h-zones-bento {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -480,7 +480,7 @@
       color: var(--muted);
     }
 
-    /* ─── Steps ─── */
+    
     .h-steps {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -529,7 +529,7 @@
       color: var(--muted);
     }
 
-    /* ─── Why Shen ─── */
+    
     .h-why {
       position: relative;
       overflow: hidden;
@@ -743,7 +743,7 @@
       color: var(--red);
     }
 
-    /* ─── Contacts + FAQ ─── */
+    
     .h-lead {
       display: grid;
       grid-template-columns: minmax(0, .92fr) minmax(0, 1.08fr);
@@ -818,7 +818,7 @@
     .h-contact-row:hover .h-contact-val { color: var(--red); }
     .h-form-wrap .h-btn { margin-top: auto; width: 100%; justify-content: center; }
 
-    /* FAQ column */
+    
     .h-faq-col {
       display: flex;
       flex-direction: column;
@@ -903,7 +903,7 @@
       padding: 0 36px 20px 0;
     }
 
-    /* ─── Footer ─── */
+    
     .h-footer {
       background: var(--ink);
       padding: 32px 0;
@@ -927,7 +927,7 @@
     }
     .h-footer-dot { opacity: .3; }
 
-    /* ─── Responsive ─── */
+    
     @media (max-width: 1024px) {
       .h-cats { grid-template-columns: repeat(2, 1fr); }
       .h-cat:nth-child(1) { grid-column: span 2; }
@@ -1025,7 +1025,7 @@
 </head>
 <body>
 
-  <!-- ─── Topbar ─── -->
+  
   <div class="h-topbar">
     <div class="h-topbar-inner">
       <a href="index.html" class="h-logo">Shen<em>.</em></a>
@@ -1036,7 +1036,7 @@
     </div>
   </div>
 
-  <!-- ─── Hero ─── -->
+  
   <section class="h-hero" id="hero">
     <div class="h-container">
       <div class="h-hero-grid">
@@ -1071,7 +1071,7 @@
     </div>
   </section>
 
-  <!-- ─── Category mosaic ─── -->
+  
   <section class="h-section" id="categories">
     <div class="h-container">
       <div class="h-section-head">
@@ -1083,7 +1083,7 @@
     </div>
   </section>
 
-  <!-- ─── Zones ─── -->
+  
   <section class="h-section h-section--soft">
     <div class="h-container">
       <div class="h-section-head">
@@ -1157,7 +1157,7 @@
     </div>
   </section>
 
-  <!-- ─── How it works ─── -->
+  
   <section class="h-section">
     <div class="h-container">
       <div class="h-section-head">
@@ -1185,7 +1185,7 @@
     </div>
   </section>
 
-  <!-- ─── Why Shen ─── -->
+  
   <section class="h-section h-section--soft h-why">
     <div class="h-container">
       <div class="h-why-head">
@@ -1308,12 +1308,12 @@
     </div>
   </section>
 
-  <!-- ─── Contacts + FAQ ─── -->
+  
   <section class="h-section" id="lead">
     <div class="h-container">
       <div class="h-lead">
 
-        <!-- Contacts -->
+        
         <div class="h-form-wrap">
           <div class="h-eyebrow">Контакты</div>
           <div class="h-form-title">Свяжитесь с нами</div>
@@ -1344,7 +1344,7 @@
           </a>
         </div>
 
-        <!-- FAQ -->
+        
         <div class="h-faq-col">
           <div class="h-eyebrow">Частые вопросы</div>
           <div class="h-faq-title">Ответим коротко</div>
@@ -1402,13 +1402,13 @@
   </section>
 
   <script>
-    // ─── Hero reveal on load ───
+    
     const hero = document.querySelector('.h-hero');
     requestAnimationFrame(() => {
       requestAnimationFrame(() => { hero.classList.add('is-visible'); });
     });
 
-    // ─── FAQ accordion ───
+    
     document.querySelectorAll('.h-faq-q').forEach(btn => {
       btn.addEventListener('click', () => {
         const item = btn.closest('.h-faq-item');
@@ -1418,7 +1418,7 @@
       });
     });
 
-    // ─── Smooth scroll for anchor links ───
+    
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const target = document.querySelector(a.getAttribute('href'));

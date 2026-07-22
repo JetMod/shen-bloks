@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>shen.market</title>
-  <link rel="stylesheet" href="index.css" />
-  
-</head>
-<body>
+<?php
+if (!isset($shen_assets_url)) {
+    $shen_assets_url = '';
+}
+$shen_assets_url = rtrim((string)$shen_assets_url, '/') . ($shen_assets_url !== '' ? '/' : '');
+?>
+<link rel="stylesheet" href="<?php echo htmlspecialchars($shen_assets_url . 'index.css', ENT_QUOTES, 'UTF-8'); ?>" />
 
 <div id="block-about">
 <section class="shen-ab-section">
@@ -32,7 +29,7 @@
 
       <div class="shen-ab-photo">
         <img
-          src="images/image.png"
+          src="<?php echo htmlspecialchars($shen_assets_url, ENT_QUOTES, 'UTF-8'); ?>images/image.png"
           alt="Профессиональная кухня"
           loading="lazy"
         />
@@ -708,6 +705,3 @@
     }
   })();
 </script>
-
-</body>
-</html>
