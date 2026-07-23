@@ -4,20 +4,22 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: #f4f4f4;
+  background: #fff;
 }
 
 .shen-ab-section {
   font-family: 'Inter', 'Arial', sans-serif;
-  background: #f2f1ef;
-  padding: 90px 40px;
+  background: #fff;
+  padding: 90px 0;
   box-sizing: border-box;
   color: #111;
 }
 
 .shen-ab-container {
-  max-width: 1200px;
+  max-width: calc(1395px + 48px);
+  width: 100%;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
 .shen-ab-intro {
@@ -85,44 +87,6 @@ body {
   border-radius: 100px;
   padding: 6px 14px;
   white-space: nowrap;
-}
-
-.shen-ab-stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  margin-bottom: 72px;
-}
-.shen-ab-stat {
-  padding: 24px 22px;
-  background: #fff;
-  border: 1px solid rgba(0,0,0,.07);
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.03);
-  transition: border-color .3s, transform .3s, box-shadow .3s;
-}
-.shen-ab-stat:hover {
-  border-color: rgba(192,57,43,.3);
-  box-shadow: 0 8px 24px rgba(192,57,43,.07);
-  transform: translateY(-2px);
-}
-.shen-ab-stat-num {
-  font-size: 30px;
-  font-weight: 900;
-  color: #111;
-  letter-spacing: -.03em;
-  line-height: 1;
-  margin-bottom: 8px;
-}
-.shen-ab-stat-num span {
-  color: #c0392b;
-  font-size: .62em;
-  margin-left: 1px;
-}
-.shen-ab-stat-label {
-  font-size: 13px;
-  color: #777;
-  line-height: 1.4;
 }
 
 .shen-ab-features {
@@ -342,30 +306,23 @@ body {
 .shen-ab-dr-nav-counter { font-size: 12px; color: #aaa; font-weight: 500; }
 
 @media (max-width: 900px) {
-  .shen-ab-section { padding: 64px 20px; }
+  .shen-ab-section { padding: 64px 0; }
   .shen-ab-intro {
     grid-template-columns: 1fr;
     gap: 36px;
     margin-bottom: 40px;
   }
-  .shen-ab-stats {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    margin-bottom: 48px;
-  }
-  .shen-ab-stat { padding: 18px 16px; }
-  .shen-ab-stat-num { font-size: 24px; }
-  .shen-ab-stat-label { font-size: 12px; }
   .shen-ab-features {
     display: flex;
     gap: 12px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scroll-padding-inline: 24px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    margin-left: -20px;
-    margin-right: -20px;
-    padding: 2px 20px 8px;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 2px 24px 8px;
   }
   .shen-ab-features::-webkit-scrollbar { display: none; }
   .shen-ab-feature {
@@ -375,23 +332,29 @@ body {
   }
 }
 @media (max-width: 600px) {
-  .shen-ab-section { padding: 48px 16px; }
-}
-@media (max-width: 520px) {
-  .shen-ab-stats { grid-template-columns: 1fr; }
+  .shen-ab-section { padding: 48px 0; }
+  .shen-ab-container { padding: 0 16px; }
+  .shen-ab-features {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 2px 16px 8px;
+    scroll-padding-inline: 16px;
+  }
 }
 
 .shen-rv-section {
   font-family: 'Inter', 'Arial', sans-serif;
-  background: #f2f1ef;
+  background: #fff;
   padding: 90px 0;
   box-sizing: border-box;
   overflow: hidden;
   position: relative;
+  border-top: 1px solid rgba(0,0,0,.06);
 }
 
 .shen-rv-container {
-  max-width: 1200px;
+  max-width: calc(1395px + 48px);
+  width: 100%;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -594,6 +557,7 @@ body {
 }
 @media (max-width: 600px) {
   .shen-rv-section { padding: 48px 0; }
+  .shen-rv-container { padding: 0 16px; }
   .shen-rv-heading {
     padding-bottom: 24px;
     margin-bottom: 24px;
@@ -608,13 +572,16 @@ body {
 .shen-wc-section {
   font-family: 'Inter', 'Arial', sans-serif;
   background: #fff;
-  padding: 90px 24px;
+  padding: 90px 0;
   box-sizing: border-box;
+  border-top: 1px solid rgba(0,0,0,.06);
 }
 
 .shen-wc-container {
-  max-width: 1200px;
+  max-width: calc(1395px + 48px);
+  width: 100%;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
 .shen-wc-layout {
@@ -734,7 +701,7 @@ body {
 }
 
 .shen-wc-rows {
-  background: #f8f8f7;
+  background: #f7f7f7;
   border: 1px solid rgba(0,0,0,.07);
   border-radius: 24px;
   overflow: hidden;
@@ -764,7 +731,7 @@ body {
   transition: background .22s ease;
   border-radius: 0 2px 2px 0;
 }
-.shen-wc-row:hover { background: #faf9f8; }
+.shen-wc-row:hover { background: #f7f7f7; }
 .shen-wc-row:hover::before { background: #c0392b; }
 
 .shen-wc-row-num {
@@ -823,7 +790,7 @@ body {
 }
 
 @media (max-width: 960px) {
-  .shen-wc-section { padding: 64px 16px; }
+  .shen-wc-section { padding: 64px 0; }
   .shen-wc-layout {
     grid-template-columns: 1fr;
     gap: 14px;
@@ -859,15 +826,16 @@ body {
     gap: 12px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
+    scroll-padding-inline: 24px;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     background: transparent;
     border: none;
     box-shadow: none;
     border-radius: 0;
-    margin-left: -16px;
-    margin-right: -16px;
-    padding: 2px 16px 6px;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding: 2px 24px 6px;
   }
   .shen-wc-rows::-webkit-scrollbar { display: none; }
 
@@ -930,9 +898,16 @@ body {
   }
 }
 @media (max-width: 600px) {
-  .shen-wc-section { padding: 48px 16px; }
+  .shen-wc-section { padding: 48px 0; }
+  .shen-wc-container { padding: 0 16px; }
   .shen-wc-feature { padding: 22px 18px 24px; }
   .shen-wc-feature h2 { font-size: 20px; }
+  .shen-wc-rows {
+    margin-left: -16px;
+    margin-right: -16px;
+    padding: 2px 16px 6px;
+    scroll-padding-inline: 16px;
+  }
   .shen-wc-row {
     flex: 0 0 min(82vw, 260px);
     padding: 16px 14px;
@@ -941,14 +916,17 @@ body {
 
 .shen-faq-section {
   font-family: 'Inter', 'Arial', sans-serif;
-  background: #f2f1ef;
-  padding: 90px 24px;
+  background: #fff;
+  padding: 90px 0;
   box-sizing: border-box;
+  border-top: 1px solid rgba(0,0,0,.06);
 }
 
 .shen-faq-container {
-  max-width: 1200px;
+  max-width: calc(1395px + 48px);
+  width: 100%;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
 .shen-faq-heading {
@@ -1139,7 +1117,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .shen-faq-section { padding: 64px 16px; }
+  .shen-faq-section { padding: 64px 0; }
   .shen-faq-heading {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -1191,27 +1169,31 @@ body {
 }
 @media (max-width: 600px) {
   .shen-faq-section {
-    padding: 48px 16px;
+    padding: 48px 0;
   }
+  .shen-faq-container { padding: 0 16px; }
   .shen-faq-heading h2 { font-size: 24px; }
 }
 
 .shen-ct-section {
   font-family: 'Inter', 'Arial', sans-serif;
-  background-color: #f2f1ef;
+  background-color: #fff;
   background-image:
-    radial-gradient(rgba(0,0,0,.045) 1px, transparent 1px),
-    radial-gradient(circle at 12% 18%, rgba(192,57,43,.06) 0%, transparent 42%),
-    radial-gradient(circle at 88% 78%, rgba(192,57,43,.05) 0%, transparent 40%);
+    radial-gradient(rgba(0,0,0,.04) 1px, transparent 1px),
+    radial-gradient(circle at 12% 18%, rgba(192,57,43,.05) 0%, transparent 42%),
+    radial-gradient(circle at 88% 78%, rgba(192,57,43,.04) 0%, transparent 40%);
   background-size: 22px 22px, auto, auto;
-  padding: 90px 24px;
+  padding: 90px 0;
   box-sizing: border-box;
   color: #111;
+  border-top: 1px solid rgba(0,0,0,.06);
 }
 
 .shen-ct-container {
-  max-width: 1200px;
+  max-width: calc(1395px + 48px);
+  width: 100%;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
 .shen-ct-heading {
@@ -1291,7 +1273,7 @@ body {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: .01em;
-  background: #f3f1ef;
+  background: #f7f7f7;
   color: #555;
 }
 
@@ -1308,7 +1290,7 @@ body {
   animation: shen-ct-pulse 1.8s ease infinite;
 }
 .shen-ct-badge--closed {
-  background: #f3f1ef;
+  background: #f7f7f7;
   color: #777;
 }
 .shen-ct-badge--closed .shen-ct-dot {
@@ -1392,15 +1374,15 @@ a.shen-ct-line:hover { color: #c0392b; }
 }
 
 .shen-ct-btn--ghost {
-  background: #f3f1ef;
+  background: #f7f7f7;
   color: #222;
 }
 .shen-ct-btn--ghost:hover {
-  background: #ebe8e4;
+  background: #e8e6e3;
 }
 
 .shen-ct-benefits {
-  background: #f7f5f3;
+  background: #f7f7f7;
   border-radius: 16px;
   padding: 16px 18px;
   display: flex;
@@ -1528,13 +1510,14 @@ a.shen-ct-line:hover { color: #c0392b; }
 .shen-ct-map-card a:hover { color: #ffb0a6; }
 
 @media (max-width: 960px) {
-  .shen-ct-section { padding: 64px 24px; }
+  .shen-ct-section { padding: 64px 0; }
   .shen-ct-grid { grid-template-columns: 1fr; }
   .shen-ct-map { min-height: 380px; }
 }
 
 @media (max-width: 600px) {
-  .shen-ct-section { padding: 48px 16px; }
+  .shen-ct-section { padding: 48px 0; }
+  .shen-ct-container { padding: 0 16px; }
   .shen-ct-card { padding: 24px 20px 20px; border-radius: 20px; }
   .shen-ct-map { min-height: 320px; border-radius: 20px; }
   .shen-ct-map-card {
